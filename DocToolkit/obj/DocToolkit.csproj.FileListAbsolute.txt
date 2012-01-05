@@ -1,0 +1,5 @@
+C:\Users\xiaoqiang\Desktop\cp\DrawTools2005_src\DrawTools2005\DocToolkit\bin\Debug\DocToolkit.dll
+C:\Users\xiaoqiang\Desktop\cp\DrawTools2005_src\DrawTools2005\DocToolkit\bin\Debug\DocToolkit.pdb
+C:\Users\xiaoqiang\Desktop\cp\DrawTools2005_src\DrawTools2005\DocToolkit\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\xiaoqiang\Desktop\cp\DrawTools2005_src\DrawTools2005\DocToolkit\obj\Debug\DocToolkit.dll
+C:\Users\xiaoqiang\Desktop\cp\DrawTools2005_src\DrawTools2005\DocToolkit\obj\Debug\DocToolkit.pdb
