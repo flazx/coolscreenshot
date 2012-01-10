@@ -22,7 +22,7 @@ namespace DrawTools
     /// List of graphic objects
     /// </summary>
     [Serializable]
-    class GraphicsList : ISerializable
+    public class GraphicsList : ISerializable
     {
         #region Members
 

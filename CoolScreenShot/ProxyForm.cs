@@ -39,7 +39,7 @@ namespace CoolScreenShot
 		
 		public void RegisterAppHotKey()
 		{
-			Hotkey hk = new Hotkey(Keys.A, false, true, true, true);
+			Hotkey hk = new Hotkey(Keys.A, false, true, false, true);
 			hk.Register(this);
 			
 			if (hk.GetCanRegister(this)) {

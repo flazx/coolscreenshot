@@ -7,7 +7,7 @@ namespace DrawTools
     /// <summary>
     /// Add new object command
     /// </summary>
-    class CommandAdd : Command
+    public class CommandAdd : Command
     {
         DrawObject drawObject;
 

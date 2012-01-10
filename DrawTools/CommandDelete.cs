@@ -7,7 +7,7 @@ namespace DrawTools
     /// <summary>
     /// Delete command
     /// </summary>
-    class CommandDelete : Command
+    public class CommandDelete : Command
     {
         List<DrawObject> cloneList;    // contains selected items which are deleted
 

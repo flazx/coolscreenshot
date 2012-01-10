@@ -6,14 +6,21 @@
     <ProductVersion>8.0.50727</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{56C76B98-1CE1-4156-885E-EC04150747DF}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
+    <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>DrawTools</RootNamespace>
     <AssemblyName>DrawTools</AssemblyName>
+    <SignAssembly>False</SignAssembly>
+    <DelaySign>False</DelaySign>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <NoStdLib>False</NoStdLib>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <SourceAnalysisOverrideSettingsFile>C:\Users\xiaoqiang\AppData\Roaming\ICSharpCode/SharpDevelop4.1\Settings.SourceAnalysis</SourceAnalysisOverrideSettingsFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
-    <DebugType>full</DebugType>
+    <DebugType>Full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
@@ -27,6 +34,16 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <CheckForOverflowUnderflow>False</CheckForOverflowUnderflow>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Platform)' == 'AnyCPU' ">
+    <RegisterForComInterop>False</RegisterForComInterop>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+    <BaseAddress>4194304</BaseAddress>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <FileAlignment>4096</FileAlignment>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -48,28 +65,20 @@
     <Compile Include="DrawArea.Designer.cs">
       <DependentUpon>DrawArea.cs</DependentUpon>
     </Compile>
+    <Compile Include="DrawAreaRectangle.cs" />
+    <Compile Include="DrawArrow.cs" />
     <Compile Include="DrawEllipse.cs" />
     <Compile Include="DrawLine.cs" />
     <Compile Include="DrawObject.cs" />
-    <Compile Include="DrawPolygon.cs">
-      <DependentUpon>GraphicsProperties.cs</DependentUpon>
-    </Compile>
+    <Compile Include="DrawPolygon.cs" />
     <Compile Include="DrawRectangle.cs" />
-    <Compile Include="FrmAbout.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FrmAbout.Designer.cs">
-      <DependentUpon>FrmAbout.cs</DependentUpon>
-    </Compile>
+    <Compile Include="DrawText.cs" />
+    <Compile Include="GraphicsList.cs" />
     <Compile Include="IDrawAreaOwner.cs" />
     <Compile Include="LayeredForm.cs" />
-    <Compile Include="GraphicsList.cs" />
     <Compile Include="GraphicsProperties.cs" />
-    <Compile Include="MainForm.cs" />
-    <Compile Include="MainForm.Designer.cs" />
     <Compile Include="NativeMethods.cs" />
     <Compile Include="PaintLayerEventArgs.cs" />
-    <Compile Include="Program.cs" />
     <Compile Include="PropertiesDialog.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -77,19 +86,11 @@
       <DependentUpon>PropertiesDialog.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="UserControl1.cs" />
-    <Compile Include="UserControl1.Designer.cs">
-      <DependentUpon>UserControl1.cs</DependentUpon>
-    </Compile>
+    <Compile Include="ToolText.cs" />
     <EmbeddedResource Include="DrawArea.resx">
       <SubType>Designer</SubType>
       <DependentUpon>DrawArea.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FrmAbout.resx">
-      <SubType>Designer</SubType>
-      <DependentUpon>FrmAbout.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="MainForm.resx" />
     <EmbeddedResource Include="PropertiesDialog.resx">
       <SubType>Designer</SubType>
       <DependentUpon>PropertiesDialog.cs</DependentUpon>
@@ -103,18 +104,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="QQCrop.resx">
-      <DependentUpon>QQCrop.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="QQForm1.resx">
-      <DependentUpon>QQForm1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ResizeAreaForm.resx">
-      <DependentUpon>ResizeAreaForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControl1.resx">
-      <DependentUpon>UserControl1.cs</DependentUpon>
-    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -123,18 +112,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
-    </Compile>
-    <Compile Include="QQCrop.cs" />
-    <Compile Include="QQCrop.Designer.cs">
-      <DependentUpon>QQCrop.cs</DependentUpon>
-    </Compile>
-    <Compile Include="QQForm1.cs" />
-    <Compile Include="QQForm1.Designer.cs">
-      <DependentUpon>QQForm1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="ResizeAreaForm.cs" />
-    <Compile Include="ResizeAreaForm.Designer.cs">
-      <DependentUpon>ResizeAreaForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Tool.cs" />
     <Compile Include="ToolEllipse.cs" />

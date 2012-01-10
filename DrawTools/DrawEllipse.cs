@@ -7,7 +7,7 @@ namespace DrawTools
 	/// <summary>
 	/// Ellipse graphic object
 	/// </summary>
-	class DrawEllipse : DrawTools.DrawRectangle
+	public class DrawEllipse : DrawTools.DrawRectangle
 	{
 		public DrawEllipse() : this(0, 0, 1, 1)
 		{

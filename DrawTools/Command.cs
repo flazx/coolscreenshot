@@ -12,7 +12,7 @@ namespace DrawTools
     /// <summary>
     /// Base class for commands used for Undo - Redo
     /// </summary>
-    abstract class Command
+    public abstract class Command
     {
         // This function is used to make Undo operation.
         // It makes action opposite to the original command.

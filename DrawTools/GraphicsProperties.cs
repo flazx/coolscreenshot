@@ -12,7 +12,7 @@ namespace DrawTools
     /// Helper class used to show properties
     /// for one or more graphic objects
     /// </summary>
-    class GraphicsProperties
+    public class GraphicsProperties
     {
         private Color? color;
         private int? penWidth;

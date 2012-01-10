@@ -8,7 +8,7 @@ namespace DrawTools
     /// Changing state of existing objects:
     /// move, resize, change properties.
     /// </summary>
-    class CommandChangeState : Command
+    public class CommandChangeState : Command
     {
         // Selected object(s) before operation
         List<DrawObject> listBefore;

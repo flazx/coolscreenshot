@@ -8,12 +8,12 @@ namespace DrawTools
 	/// <summary>
 	/// Rectangle tool
 	/// </summary>
-	class ToolRectangle : DrawTools.ToolObject
+	public class ToolRectangle : DrawTools.ToolObject
 	{
 
 		public ToolRectangle()
 		{
-            Cursor = new Cursor(GetType(), "Rectangle.cur");
+            //Cursor = new Cursor(GetType(), "Rectangle.cur");
 		}
 
         public override void OnMouseDown(DrawArea drawArea, MouseEventArgs e)

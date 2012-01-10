@@ -1,0 +1,15 @@
+F:\apps\github\CoolShot\CoolScreenShot\obj\x86\Debug\ResolveAssemblyReference.cache
+F:\apps\github\CoolShot\CoolScreenShot\bin\Debug\CoolScreenShot.exe
+F:\apps\github\CoolShot\CoolScreenShot\bin\Debug\CoolScreenShot.pdb
+F:\apps\github\CoolShot\CoolScreenShot\bin\Debug\DocToolkit.dll
+F:\apps\github\CoolShot\CoolScreenShot\bin\Debug\DrawTools.dll
+F:\apps\github\CoolShot\CoolScreenShot\bin\Debug\DocToolkit.pdb
+F:\apps\github\CoolShot\CoolScreenShot\bin\Debug\DrawTools.pdb
+F:\apps\github\CoolShot\CoolScreenShot\obj\x86\Debug\CoolScreenShot.exe
+F:\apps\github\CoolShot\CoolScreenShot\obj\x86\Debug\CoolScreenShot.pdb
+F:\apps\github\CoolShot\CoolScreenShot\bin\Debug\icon.ico
+F:\apps\github\CoolShot\CoolScreenShot\obj\x86\Debug\GenerateResource.read.1.tlog
+F:\apps\github\CoolShot\CoolScreenShot\obj\x86\Debug\GenerateResource.write.1.tlog
+F:\apps\github\CoolShot\CoolScreenShot\obj\x86\Debug\CoolScreenShot.FrmAbout.resources
+F:\apps\github\CoolShot\CoolScreenShot\obj\x86\Debug\CoolScreenShot.MainForm.resources
+F:\apps\github\CoolShot\CoolScreenShot\obj\x86\Debug\CoolScreenShot.UserControls.MyColorPicker.resources

@@ -17,11 +17,11 @@ namespace DrawTools
     /// <summary>
     /// Polygon graphic object
     /// </summary>
-    class DrawPolygon : DrawTools.DrawLine
+    public class DrawPolygon : DrawTools.DrawLine
     {
         private PointList pointArray;         // list of points
 
-        private static Cursor handleCursor = new Cursor(typeof(DrawPolygon), "PolyHandle.cur");
+        private static Cursor handleCursor = Cursors.Cross;//new Cursor(typeof(DrawPolygon), "PolyHandle.cur");
 
         private const string entryLength = "Length";
         private const string entryPoint = "Point";

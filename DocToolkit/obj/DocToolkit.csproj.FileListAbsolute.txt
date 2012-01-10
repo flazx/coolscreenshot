@@ -3,3 +3,13 @@ C:\Users\xiaoqiang\Desktop\cp\DrawTools2005_src\DrawTools2005\DocToolkit\bin\Deb
 C:\Users\xiaoqiang\Desktop\cp\DrawTools2005_src\DrawTools2005\DocToolkit\obj\Debug\ResolveAssemblyReference.cache
 C:\Users\xiaoqiang\Desktop\cp\DrawTools2005_src\DrawTools2005\DocToolkit\obj\Debug\DocToolkit.dll
 C:\Users\xiaoqiang\Desktop\cp\DrawTools2005_src\DrawTools2005\DocToolkit\obj\Debug\DocToolkit.pdb
+F:\apps\personal\DrawTools2005\DocToolkit\bin\Debug\DocToolkit.dll
+F:\apps\personal\DrawTools2005\DocToolkit\bin\Debug\DocToolkit.pdb
+F:\apps\personal\DrawTools2005\DocToolkit\obj\Debug\ResolveAssemblyReference.cache
+F:\apps\personal\DrawTools2005\DocToolkit\obj\Debug\DocToolkit.dll
+F:\apps\personal\DrawTools2005\DocToolkit\obj\Debug\DocToolkit.pdb
+F:\apps\github\CoolShot\DocToolkit\bin\Debug\DocToolkit.dll
+F:\apps\github\CoolShot\DocToolkit\bin\Debug\DocToolkit.pdb
+F:\apps\github\CoolShot\DocToolkit\obj\Debug\ResolveAssemblyReference.cache
+F:\apps\github\CoolShot\DocToolkit\obj\Debug\DocToolkit.dll
+F:\apps\github\CoolShot\DocToolkit\obj\Debug\DocToolkit.pdb

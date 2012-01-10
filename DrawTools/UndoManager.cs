@@ -13,7 +13,7 @@ namespace DrawTools
     /// <summary>
     /// Class is responsible for executing Undo - Redo operations
     /// </summary>
-    class UndoManager
+    public class UndoManager
     {
         #region Class Members
 

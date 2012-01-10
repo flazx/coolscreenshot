@@ -6,13 +6,12 @@ using System.Drawing;
 using System.Reflection;
 using System.Text;
 using System.Windows.Forms;
-using ZBobb;
 
 using DocToolkit;
 
 namespace DrawTools
 {
-    partial class DrawArea : UserControl
+    public partial class DrawArea : UserControl
     {
         #region Constructor
 

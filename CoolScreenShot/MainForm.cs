@@ -11,13 +11,15 @@ using System.Drawing;
 using System.Drawing.Imaging;
 using System.Windows.Forms;
 
+using CoolScreenShot.UserControls;
 using DocToolkit;
-using DrawTools.UserControls;
+using DrawTools;
 
-namespace DrawTools
+namespace CoolScreenShot
 {
-	public partial class QQForm1 : Form,IDrawAreaOwner
+	public partial class MainForm : Form,IDrawAreaOwner
 	{
+		#region properties
 		private enum SelectionMode
 		{
 			None,
@@ -26,7 +28,6 @@ namespace DrawTools
 			Size            // object is resized
 		}
 		
-		#region properties
 		DocManager docManager;
 		Graphics g;
 		DrawAreaRectangle drawRect;
@@ -36,8 +37,7 @@ namespace DrawTools
 		Point firstStartPoint = Point.Empty;
 		Point firstEndPoint = Point.Empty;
 		bool drawAreaCreated = false;
-		
-		bool wasMove;
+
 		int resizedObjectHandle;
 		SelectionMode selectMode = SelectionMode.None;
 		
@@ -46,7 +46,7 @@ namespace DrawTools
 		#endregion
 		
 		#region initialize
-		public QQForm1()
+		public MainForm()
 		{
 			InitializeComponent();
 			
@@ -86,33 +86,7 @@ namespace DrawTools
 			};
 		}
 		
-		void QQForm1Load(object sender, EventArgs e)
-		{
-			Rectangle b = Screen.PrimaryScreen.Bounds;
-			Size s = new Size(b.Width,b.Height);
-			Bitmap memoryImage = new Bitmap(s.Width, s.Height, g);
-			
-			Graphics memoryGraphics = Graphics.FromImage(memoryImage);
-			memoryGraphics.CopyFromScreen(Screen.PrimaryScreen.Bounds.X,
-			                              Screen.PrimaryScreen.Bounds.Y, 0, 0, Screen.PrimaryScreen.Bounds.Size,
-			                              CopyPixelOperation.SourceCopy);
-			
-			//memoryImage.Save(@"c:\test.jpg");
-			this.BackgroundImage = memoryImage;
-			this.drawArea.OriginalBackgroundImage = memoryImage;
-			this.toolStripPanel.BringToFront();
-			
-			g = this.CreateGraphics();
-			
-			FormBorderStyle = FormBorderStyle.None;
-			WindowState = FormWindowState.Maximized;
-			//TopMost = true;
-			
-			this.SetStyle(
-				ControlStyles.AllPaintingInWmPaint |
-				ControlStyles.UserPaint |
-				ControlStyles.DoubleBuffer,true);
-		}
+		
 		#endregion
 		
 		#region tools event
@@ -148,16 +122,17 @@ namespace DrawTools
 			this.currentCommandName = command;
 			ExecuteCommand(command);
 			
-			bool currentCommandNeedColorPickerPanel = 
+			this.myColorPicker.Visible = IsCurrentCommandNeedColorPicker();
+		}
+		
+		private bool IsCurrentCommandNeedColorPicker(){
+			return 
 				currentCommandName == "rectangle" ||
  				currentCommandName == "ellipse"	||	
 				currentCommandName == "text"	||
 				currentCommandName == "line"	||
 				currentCommandName == "arrow"	||
 				currentCommandName == "pencil";
-			if (currentCommandNeedColorPickerPanel) {
-				this.ShowColorPickerPanel();
-			}
 		}
 		
 		private void ExecuteCommand(string command){
@@ -258,7 +233,7 @@ namespace DrawTools
 					docManager.SaveDocument(DocManager.SaveType.SaveAs);
 					break;
 				case "exit":
-					Application.Exit();
+					this.exit();
 					break;
 			}
 		}
@@ -271,20 +246,13 @@ namespace DrawTools
 			if (saveCropFileDialog.ShowDialog() == DialogResult.OK) {
 				Bitmap bmp = this.GetCurrentCropAnnotateImage();
 				bmp.Save(saveCropFileDialog.FileName, formats[saveCropFileDialog.FilterIndex]);
-				Application.Exit();
+				this.exit();
 			}
-		}
-		
-		private Bitmap GetCurrentCropAnnotateImage(){
-			Bitmap bmp = new System.Drawing.Bitmap(drawArea.ClientRectangle.Width, drawArea.ClientRectangle.Height);
-			drawArea.DrawToBitmap(bmp, drawArea.ClientRectangle);
-			
-			return bmp;
 		}
 		
 		private void CommandComplete(){
 			Clipboard.SetImage(this.GetCurrentCropAnnotateImage());
-			Application.Exit();
+			this.exit();
 		}
 
 		
@@ -298,8 +266,6 @@ namespace DrawTools
 			}
 			
 			if(!HasDrawRectangleArea) return;
-			
-			wasMove = false;
 
 			selectMode = SelectionMode.None;
 			Point point = new Point(e.X, e.Y);
@@ -342,6 +308,7 @@ namespace DrawTools
 				resizeDrawArea();
 				this.drawArea.Visible = true;
 				this.toolStripPanel.Visible = true;
+				this.myColorPicker.Visible = IsCurrentCommandNeedColorPicker();
 			}
 			
 			base.OnMouseUp(e);
@@ -359,8 +326,6 @@ namespace DrawTools
 			
 			Point point = new Point(e.X, e.Y);
 			Point oldPoint = lastPoint;
-
-			wasMove = true;
 
 			// set cursor when mouse button is not pressed
 			if (e.Button == MouseButtons.None)
@@ -398,6 +363,7 @@ namespace DrawTools
 			{
 				//this.drawArea.Visible = false;
 				this.toolStripPanel.Visible = false;
+				this.myColorPicker.Visible = false;
 				
 				this.resizeDrawArea();
 				drawRect.MoveHandleTo(point, resizedObjectHandle);
@@ -437,7 +403,7 @@ namespace DrawTools
 			if(HasDrawRectangleArea){
 				DrawCropArea(g);
 				DrawBG(g);
-				UpdateToolsPanelLocation();
+				UpdateToolsPanelColorPickerLocation();
 				DrawCropAreaWHIndicator(g);
 			}
 			
@@ -486,12 +452,6 @@ namespace DrawTools
 			g.FillRectangle(brush, left + w, 0, b.Width - left - w, b.Height);
 		}
 		
-		void ShowColorPickerPanel(){
-			Point toolstripLocation = this.GetToolsPanelLocation();
-			this.myColorPicker.Location = new Point(toolstripLocation.X, toolstripLocation.Y + toolStrip1.Height + 5);
-			this.myColorPicker.Visible = true;
-		}
-		
 		void DrawCropAreaWHIndicator(Graphics g){
 			Color bgColor = Color.FromArgb(56,63,68);
 			SolidBrush brush = new SolidBrush(bgColor);
@@ -527,31 +487,35 @@ namespace DrawTools
 			                firstEndPoint.Y - firstStartPoint.Y);
 		}
 		
-		Point GetToolsPanelLocation(){
+		void UpdateToolsPanelColorPickerLocation(){
 			Rectangle r  = CropAreaRectangle;
 			Rectangle b = Screen.PrimaryScreen.Bounds;
 			
 			int h = this.toolStripPanel.Height;
 			int w = this.toolStripPanel.Width;
 			int marginTop = 5;
-			int propertyDialogHeight = 40;
 			int top, left;
+			
+			int colorPickerHeight = 39,colorPickerStripPanelSpace = 5;
 			
 			top = r.Height < 0 ? r.Y + r.Height : r.Y;
 			left = r.Width < 0 ? r.X + r.Width : r.X;
 			
-			int x, y;
+			int x, y, x1, y1;
 			
-			if(r.Bottom  + marginTop + h > b.Height){
-				if(top - marginTop - h < 0){
+			if(r.Bottom  + marginTop + h + colorPickerHeight + colorPickerStripPanelSpace > b.Height){
+				if(top - marginTop - h - colorPickerHeight - colorPickerStripPanelSpace < 0){
 					y = top;
+					y1 = y + colorPickerStripPanelSpace + h;
 				}
 				else{
 					y = top - marginTop - h;
+					y1 = y - colorPickerStripPanelSpace - colorPickerHeight;
 				}
 			}
 			else{
 				y = top + Math.Abs(r.Height) + marginTop;
+				y1 = y + colorPickerStripPanelSpace + h;
 			}
 			
 			if(left + Math.Abs(r.Width) < this.toolStripPanel.Width){
@@ -561,34 +525,83 @@ namespace DrawTools
 				x = left + Math.Abs(r.Width) - this.toolStripPanel.Width;
 			}
 			
-			
-			return new Point(x, y);
-		}
-		
-		void UpdateToolsPanelLocation(){
-			
-			this.toolStripPanel.Location = this.GetToolsPanelLocation();
-		}
-		
-		void SetVisibleOfControls(){
-			
+			x1 = x;
+
+			this.toolStripPanel.Location = new Point(x,y);
+			this.myColorPicker.Location = new Point(x1,y1);
 		}
 		
 		#endregion
 		
-		#region others
-		void QQForm1KeyPress(object sender, KeyPressEventArgs e)
+		#region override
+		protected override void OnLoad(EventArgs e)
 		{
-			if (e.KeyChar == (int)Keys.Escape) {
-				this.WindowState = FormWindowState.Minimized;
-			}
+			Rectangle b = Screen.PrimaryScreen.Bounds;
+			Size s = new Size(b.Width,b.Height);
+			Bitmap memoryImage = new Bitmap(s.Width, s.Height, g);
+			
+			Graphics memoryGraphics = Graphics.FromImage(memoryImage);
+			memoryGraphics.CopyFromScreen(Screen.PrimaryScreen.Bounds.X,
+			                              Screen.PrimaryScreen.Bounds.Y, 0, 0, Screen.PrimaryScreen.Bounds.Size,
+			                              CopyPixelOperation.SourceCopy);
+			
+			this.BackgroundImage = memoryImage;
+			this.drawArea.OriginalBackgroundImage = memoryImage;
+			this.toolStripPanel.BringToFront();
+			
+			g = this.CreateGraphics();
+			
+			FormBorderStyle = FormBorderStyle.None;
+			WindowState = FormWindowState.Maximized;
+			TopMost = true;
+			
+			this.SetStyle(
+				ControlStyles.AllPaintingInWmPaint |
+				ControlStyles.UserPaint |
+				ControlStyles.DoubleBuffer,true);
+		}
+		
+		protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+		{
+		    // if it is a hotkey, return true; otherwise, return false
+		    switch (keyData)
+		    {
+		        case Keys.Escape:
+		    		this.WindowState = FormWindowState.Minimized;
+		            return true;
+		        default:
+		            break;
+		    }
+		
+		    return base.ProcessCmdKey(ref msg, keyData);
+		}
+		
+		protected override void OnResize(EventArgs e)
+		{
+			base.OnResize(e);
+
+		     
 		}
 		#endregion
 		
-		#region IDrawArea methods
+		#region implements IDrawArea methods
 		public void SetStateOfControls(){}
 		public ToolStripMenuItem ContextParent{ get { return this.editToolStripMenuItem ;} }
 		public Form getForm(){return this;}
+		#endregion
+		
+		#region helper methods
+		private Bitmap GetCurrentCropAnnotateImage(){
+			Bitmap bmp = new System.Drawing.Bitmap(drawArea.ClientRectangle.Width, drawArea.ClientRectangle.Height);
+			drawArea.DrawToBitmap(bmp, drawArea.ClientRectangle);
+			
+			return bmp;
+		}
+		
+		private void exit(){
+			this.WindowState = FormWindowState.Minimized;
+			this.Hide();
+		}
 		#endregion
 	}
 }

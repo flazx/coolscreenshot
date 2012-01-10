@@ -10,7 +10,7 @@ namespace DrawTools
 	/// <summary>
 	/// Base class for all draw objects
 	/// </summary>
-	abstract class DrawObject
+	public abstract class DrawObject
 	{
         #region Members
 
@@ -24,7 +24,7 @@ namespace DrawTools
         int id;   
 
         // Last used property values (may be kept in the Registry)
-        private static Color lastUsedColor = Color.Black;
+        private static Color lastUsedColor = Color.Red;
         private static int lastUsedPenWidth = 1;
 
         // Entry names for serialization
@@ -172,7 +172,7 @@ namespace DrawTools
         {
             Point point = GetHandle(handleNumber);
 
-            return new Rectangle(point.X - 3, point.Y - 3, 7, 7);
+            return new Rectangle(point.X - 2, point.Y -2, 4, 4);
         }
 
         /// <summary>
@@ -184,7 +184,7 @@ namespace DrawTools
             if ( ! Selected )
                 return;
 
-            SolidBrush brush = new SolidBrush(Color.Black);
+            SolidBrush brush = new SolidBrush(Color.FromArgb(255,0,122,236));
 
             for ( int i = 1; i <= HandleCount; i++ )
             {

@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
 
-namespace DrawTools
+namespace CoolScreenShot
 {
     static class Program
     {
@@ -17,7 +17,7 @@ namespace DrawTools
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new QQForm1());
             */
-           CropAnnotateApplicationContext applicationContext = new CropAnnotateApplicationContext();
+           	CoolShotApplicationContext applicationContext = new CoolShotApplicationContext();
 			Application.Run(applicationContext);
         }
     }

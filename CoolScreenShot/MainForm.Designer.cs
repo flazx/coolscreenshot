@@ -6,9 +6,9 @@
  * 
  * To change this template use Tools | Options | Coding | Edit Standard Headers.
  */
-namespace DrawTools
+namespace CoolScreenShot
 {
-	partial class QQForm1
+	partial class MainForm
 	{
 		/// <summary>
 		/// Designer variable used to keep track of non-visual components.
@@ -36,8 +36,7 @@ namespace DrawTools
 		/// </summary>
 		private void InitializeComponent()
 		{
-			this.components = new System.ComponentModel.Container();
-			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(QQForm1));
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
 			this.menuStrip1 = new System.Windows.Forms.MenuStrip();
 			this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
 			this.newToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -89,7 +88,7 @@ namespace DrawTools
 			this.toolStripSeparator7 = new System.Windows.Forms.ToolStripSeparator();
 			this.toolStripButton16 = new System.Windows.Forms.ToolStripButton();
 			this.toolStripSeparator8 = new System.Windows.Forms.ToolStripSeparator();
-			this.myColorPicker = new DrawTools.UserControls.MyColorPicker();
+			this.myColorPicker = new CoolScreenShot.UserControls.MyColorPicker();
 			this.toolStripPanel = new System.Windows.Forms.Panel();
 			this.toolStrip1 = new System.Windows.Forms.ToolStrip();
 			this.rectangle = new System.Windows.Forms.ToolStripButton();
@@ -105,8 +104,6 @@ namespace DrawTools
 			this.toolStripSeparator4 = new System.Windows.Forms.ToolStripSeparator();
 			this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
 			this.toolStripButton17 = new System.Windows.Forms.ToolStripButton();
-			this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
-			this.notifyIconContextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
 			this.menuStrip1.SuspendLayout();
 			this.toolStrip2.SuspendLayout();
 			this.toolStripPanel.SuspendLayout();
@@ -603,7 +600,7 @@ namespace DrawTools
 			this.toolStripPanel.Location = new System.Drawing.Point(82, 238);
 			this.toolStripPanel.Name = "toolStripPanel";
 			this.toolStripPanel.Padding = new System.Windows.Forms.Padding(2);
-			this.toolStripPanel.Size = new System.Drawing.Size(304, 28);
+			this.toolStripPanel.Size = new System.Drawing.Size(283, 28);
 			this.toolStripPanel.TabIndex = 7;
 			this.toolStripPanel.Visible = false;
 			// 
@@ -633,7 +630,7 @@ namespace DrawTools
 			this.toolStrip1.Name = "toolStrip1";
 			this.toolStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional;
 			this.toolStrip1.ShowItemToolTips = false;
-			this.toolStrip1.Size = new System.Drawing.Size(300, 25);
+			this.toolStrip1.Size = new System.Drawing.Size(279, 25);
 			this.toolStrip1.TabIndex = 4;
 			this.toolStrip1.Text = "toolStrip1";
 			// 
@@ -765,24 +762,12 @@ namespace DrawTools
 			this.toolStripButton17.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
 			this.toolStripButton17.ImageTransparentColor = System.Drawing.Color.Magenta;
 			this.toolStripButton17.Name = "toolStripButton17";
-			this.toolStripButton17.Size = new System.Drawing.Size(45, 25);
+			this.toolStripButton17.Size = new System.Drawing.Size(24, 22);
 			this.toolStripButton17.Tag = "complete";
 			this.toolStripButton17.Text = "complete";
 			this.toolStripButton17.Click += new System.EventHandler(this.toolClick);
 			// 
-			// notifyIcon
-			// 
-			this.notifyIcon.ContextMenuStrip = this.notifyIconContextMenu;
-			this.notifyIcon.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon.Icon")));
-			this.notifyIcon.Text = "notifyIcon";
-			this.notifyIcon.Visible = true;
-			// 
-			// notifyIconContextMenu
-			// 
-			this.notifyIconContextMenu.Name = "notifyIconContextMenu";
-			this.notifyIconContextMenu.Size = new System.Drawing.Size(61, 4);
-			// 
-			// QQForm1
+			// MainForm
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -794,11 +779,9 @@ namespace DrawTools
 			this.Controls.Add(this.drawArea);
 			this.Controls.Add(this.toolStrip2);
 			this.Controls.Add(this.menuStrip1);
-			this.Name = "QQForm1";
+			this.Name = "MainForm";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
-			this.Text = "QQForm1";
-			this.Load += new System.EventHandler(this.QQForm1Load);
-			this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.QQForm1KeyPress);
+			this.Text = "Cool Shot";
 			this.menuStrip1.ResumeLayout(false);
 			this.menuStrip1.PerformLayout();
 			this.toolStrip2.ResumeLayout(false);
@@ -809,10 +792,8 @@ namespace DrawTools
 			this.ResumeLayout(false);
 			this.PerformLayout();
 		}
-		private System.Windows.Forms.ContextMenuStrip notifyIconContextMenu;
-		private System.Windows.Forms.NotifyIcon notifyIcon;
 		private System.Windows.Forms.Panel toolStripPanel;
-		private DrawTools.UserControls.MyColorPicker myColorPicker;
+		private CoolScreenShot.UserControls.MyColorPicker myColorPicker;
 		private System.Windows.Forms.ToolStripButton toolStripButton17;
 		private System.Windows.Forms.ToolStripSeparator toolStripSeparator8;
 		private System.Windows.Forms.ToolStripButton toolStripButton16;

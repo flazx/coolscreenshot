@@ -10,9 +10,9 @@ namespace DrawTools
 	/// <summary>
 	/// Rectangle graphic object
 	/// </summary>
-	class DrawRectangle : DrawTools.DrawObject
+	public class DrawRectangle : DrawTools.DrawObject
 	{
-        private Rectangle rectangle;
+        protected Rectangle rectangle;
 
         private const string entryRectangle = "Rect";
 

@@ -11,10 +11,10 @@ namespace DrawTools
 	/// <summary>
 	/// Line graphic object
 	/// </summary>
-	class DrawLine : DrawTools.DrawObject
+	public class DrawLine : DrawTools.DrawObject
 	{
-        private Point startPoint;
-        private Point endPoint;
+        protected Point startPoint;
+        protected Point endPoint;
 
         private const string entryStart = "Start";
         private const string entryEnd = "End";

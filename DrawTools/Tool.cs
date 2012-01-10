@@ -8,7 +8,7 @@ namespace DrawTools
 	/// <summary>
 	/// Base class for all drawing tools
 	/// </summary>
-	abstract class Tool
+	public abstract class Tool
 	{
 
         /// <summary>
@@ -40,4 +40,12 @@ namespace DrawTools
         {
         }
     }
+	
+	class ToolArrow: ToolLine{
+		public override void OnMouseDown(DrawArea drawArea, MouseEventArgs e)
+        {
+            AddNewObject(drawArea, new DrawArrow(e.X, e.Y, e.X + 1, e.Y + 1));
+        }
+
+	}
 }

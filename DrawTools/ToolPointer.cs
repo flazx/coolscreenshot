@@ -8,7 +8,7 @@ namespace DrawTools
 	/// <summary>
 	/// Pointer tool
 	/// </summary>
-	class ToolPointer : DrawTools.Tool
+	public class ToolPointer : DrawTools.Tool
 	{
         private enum SelectionMode
         {

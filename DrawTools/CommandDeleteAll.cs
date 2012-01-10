@@ -7,7 +7,7 @@ namespace DrawTools
     /// <summary>
     /// Delete All command
     /// </summary>
-    class CommandDeleteAll : Command
+    public class CommandDeleteAll : Command
     {
         List<DrawObject> cloneList;
 

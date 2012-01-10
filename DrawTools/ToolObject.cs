@@ -8,9 +8,9 @@ namespace DrawTools
 	/// <summary>
 	/// Base class for all tools which create new graphic object
 	/// </summary>
-	abstract class ToolObject : DrawTools.Tool
+	public abstract class ToolObject : DrawTools.Tool
 	{
-        private Cursor cursor;
+        private Cursor cursor = Cursors.Cross;
 
         /// <summary>
         /// Tool cursor.
@@ -38,8 +38,10 @@ namespace DrawTools
         {
             drawArea.GraphicsList[0].Normalize();
             drawArea.AddCommandToHistory(new CommandAdd(drawArea.GraphicsList[0]));
-            drawArea.ActiveTool = DrawArea.DrawToolType.Pointer;
-
+            
+            //drawArea.ActiveTool = DrawArea.DrawToolType.Pointer;
+			
+            
             drawArea.Capture = false;
             drawArea.Refresh();
         }
@@ -55,10 +57,10 @@ namespace DrawTools
         {
             drawArea.GraphicsList.UnselectAll();
 
-            o.Selected = true;
+            //o.Selected = true;
             drawArea.GraphicsList.Add(o);
 
-            drawArea.Capture = true;
+            //drawArea.Capture = true;
             drawArea.Refresh();
 
             drawArea.SetDirty();

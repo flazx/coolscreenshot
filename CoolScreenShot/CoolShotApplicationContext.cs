@@ -18,9 +18,8 @@ namespace CoolScreenShot
 		private System.Windows.Forms.ContextMenu	notifyIconContextMenu;	// the context menu for the notify icon
 		private System.Windows.Forms.MenuItem		exitContextMenuItem;			// exit menu command for context menu 
 		private System.Windows.Forms.MenuItem		showContextMenuItem;			// open menu command for context menu 	
-		private ProxyForm mainForm;				// the current form we're displaying
+		private ProxyForm registerHotkeyForm;				// the current form we're displaying
 		
-		Hotkey hk;
 		/// <summary>
 		/// This class should be created and passed into Application.Run( ... )
 		/// </summary>
@@ -49,13 +48,11 @@ namespace CoolScreenShot
 			this.notifyIcon.Icon = new Icon(Application.StartupPath + "\\icon.ico");
 			this.notifyIcon.Text = DateTime.Now.ToLongDateString();
 			this.notifyIcon.Visible = true;
-
 			// 
 			// calendarNotifyIconContextMenu
 			// 
 			this.notifyIconContextMenu.MenuItems.AddRange(new MenuItem[] { showContextMenuItem, exitContextMenuItem });
 
-			
 			// 
 			// showContextMenuItem
 			// 
@@ -71,8 +68,8 @@ namespace CoolScreenShot
 			this.exitContextMenuItem.Text = "&Exit";
 			this.exitContextMenuItem.Click += new System.EventHandler(this.exitContextMenuItem_Click);
 			
-			this.mainForm = new ProxyForm();
-			this.mainForm.RegisterAppHotKey();
+			this.registerHotkeyForm = new ProxyForm();
+			this.registerHotkeyForm.RegisterAppHotKey();
 		}
 
 
@@ -141,14 +138,14 @@ namespace CoolScreenShot
 		/// </summary>
 		private void ShowForm() 
 		{
-			mainForm.ShowMainForm();
+			registerHotkeyForm.ShowMainForm();
 		}
 
 
 		private void mainForm_Closed (object sender, EventArgs e) 
 		{
 			// null out the main form so we know to create a new one.
-			this.mainForm = null;
+			this.registerHotkeyForm = null;
 		}
 
 		/// <summary>
@@ -156,10 +153,10 @@ namespace CoolScreenShot
 		/// </summary>
 		protected override void ExitThreadCore()
 		{
-			if (mainForm != null) 
+			if (registerHotkeyForm != null) 
 			{
 				// before we exit, give the main form a chance to clean itself up.
-				mainForm.Close();
+				registerHotkeyForm.Close();
 			}
 			base.ExitThreadCore ();
 		}

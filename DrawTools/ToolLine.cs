@@ -7,11 +7,11 @@ namespace DrawTools
 	/// <summary>
 	/// Line tool
 	/// </summary>
-	class ToolLine : DrawTools.ToolObject
+	public class ToolLine : DrawTools.ToolObject
 	{
         public ToolLine()
         {
-            Cursor = new Cursor(GetType(), "Line.cur");
+            //Cursor = new Cursor(GetType(), "Line.cur");
         }
 
         public override void OnMouseDown(DrawArea drawArea, MouseEventArgs e)

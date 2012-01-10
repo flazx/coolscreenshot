@@ -8,11 +8,11 @@ namespace DrawTools
 	/// <summary>
 	/// Polygon tool
 	/// </summary>
-	class ToolPolygon : DrawTools.ToolObject
+	public class ToolPolygon : DrawTools.ToolObject
 	{
 		public ToolPolygon()
 		{
-            Cursor = new Cursor(GetType(), "Pencil.cur");
+            //Cursor = new Cursor(GetType(), "Pencil.cur");
         }
 
         private int lastX;
