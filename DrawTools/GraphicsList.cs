@@ -33,7 +33,6 @@ namespace DrawTools
 
         #endregion
 
-
         #region Constructor
         public GraphicsList()
         {
@@ -399,7 +398,7 @@ namespace DrawTools
         /// Get properties from selected objects and fill GraphicsProperties instance
         /// </summary>
         /// <returns></returns>
-        private GraphicsProperties GetProperties()
+        public GraphicsProperties GetProperties()
         {
             GraphicsProperties properties = new GraphicsProperties();
 
@@ -498,6 +497,24 @@ namespace DrawTools
 
             if (dlg.ShowDialog(parent) != DialogResult.OK)
                 return false;
+
+            if ( ApplyProperties(properties) )
+            {
+                c.NewState(this);
+                parent.AddCommandToHistory(c);
+            }
+
+            return true;
+        }
+        
+        public bool ShowColorPickerPanel(DrawArea parent, GraphicsProperties properties){
+        	DrawObject.LastUsedColor = properties.Color.Value;
+        	DrawObject.LastUsedPenWidth = properties.PenWidth.Value;
+        	
+        	if (SelectionCount < 1)
+                return false;
+
+            CommandChangeState c = new CommandChangeState(this);
 
             if ( ApplyProperties(properties) )
             {

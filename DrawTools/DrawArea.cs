@@ -1,13 +1,14 @@
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Drawing;
 using System.Data;
+using System.Drawing;
+using System.Reflection;
 using System.Text;
 using System.Windows.Forms;
+using ZBobb;
 
 using DocToolkit;
-
 
 namespace DrawTools
 {
@@ -30,7 +31,9 @@ namespace DrawTools
             Rectangle,
             Ellipse,
             Line,
+            Arrow,
             Polygon,
+            Text,
             NumberOfDrawTools
         };
 
@@ -86,14 +89,23 @@ namespace DrawTools
             }
         }
 
-        /// <summary>
-        /// Active drawing tool.
-        /// </summary>
+        public TextBox ToolTextBox
+        {
+            get
+            {
+                return toolTextBox;
+            }
+            set
+            {
+                toolTextBox = value;
+            }
+        }
+        
         public DrawToolType ActiveTool
         {
             get
             {
-                return activeTool;
+                return this.activeTool;
             }
             set
             {
@@ -182,7 +194,9 @@ namespace DrawTools
             tools[(int)DrawToolType.Rectangle] = new ToolRectangle();
             tools[(int)DrawToolType.Ellipse] = new ToolEllipse();
             tools[(int)DrawToolType.Line] = new ToolLine();
+            tools[(int)DrawToolType.Arrow] = new ToolArrow();
             tools[(int)DrawToolType.Polygon] = new ToolPolygon();
+            tools[(int)DrawToolType.Text] = new ToolText();
         }
 
         /// <summary>
@@ -341,6 +355,24 @@ namespace DrawTools
                 tools[(int)activeTool].OnMouseDown(this, e);
             else if (e.Button == MouseButtons.Right)
                 OnContextMenu(e);
+            
+            //draw text
+            DrawObject o = graphicsList[0];
+	        DrawText drawText = o as DrawText;
+	        
+	        if(drawText != null){
+	        	if(drawText.IsJustCreated){
+	        		this.toolTextBox.Visible = true;
+	        	}
+	        	else{
+	        		//drawText.Text = this.toolTextBox.Text;
+	        		drawText.IsJustCreated = false;
+	        		//this.toolTextBox.Text = "";
+	        		this.toolTextBox.Visible= false;
+		        	
+	        		this.Refresh();
+	        	}
+		     }
         }
 
         /// <summary>
@@ -350,6 +382,8 @@ namespace DrawTools
         /// </summary>
         private void DrawArea_MouseMove(object sender, MouseEventArgs e)
         {
+        	System.Diagnostics.Trace.WriteLine("drawArea mouse move!!!");
+        	
             if (e.Button == MouseButtons.Left || e.Button == MouseButtons.None)
                 tools[(int)activeTool].OnMouseMove(this, e);
             else
@@ -380,6 +414,24 @@ namespace DrawTools
         }
         #endregion
         
+        void ToolTextBoxMouseEnter(object sender, EventArgs e)
+        {
+        	//draw text
+            DrawObject o = graphicsList[0];
+	        DrawText drawText = o as DrawText;
+	        
+	        if(drawText != null)
+	        	drawText.IsJustCreated = false;
+        }
         
+        void ToolTextBoxTextChanged(object sender, EventArgs e)
+        {
+        	//draw text
+            DrawObject o = graphicsList[0];
+	        DrawText drawText = o as DrawText;
+	        
+	        if(drawText != null)
+	        	drawText.Text = this.toolTextBox.Text;
+        }
 }
 }
