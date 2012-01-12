@@ -1,0 +1,5 @@
+E:\apps\github\CoolScreenShot\DocToolkit\bin\Debug\DocToolkit.dll
+E:\apps\github\CoolScreenShot\DocToolkit\bin\Debug\DocToolkit.pdb
+E:\apps\github\CoolScreenShot\DocToolkit\obj\Debug\ResolveAssemblyReference.cache
+E:\apps\github\CoolScreenShot\DocToolkit\obj\Debug\DocToolkit.dll
+E:\apps\github\CoolScreenShot\DocToolkit\obj\Debug\DocToolkit.pdb

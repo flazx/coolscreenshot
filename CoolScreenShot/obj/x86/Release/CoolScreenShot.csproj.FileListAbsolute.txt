@@ -1,0 +1,15 @@
+E:\apps\github\CoolScreenShot\CoolScreenShot\bin\Release\icon.ico
+E:\apps\github\CoolScreenShot\CoolScreenShot\bin\Release\CoolScreenShot.exe
+E:\apps\github\CoolScreenShot\CoolScreenShot\bin\Release\DocToolkit.dll
+E:\apps\github\CoolScreenShot\CoolScreenShot\bin\Release\DrawTools.dll
+E:\apps\github\CoolScreenShot\CoolScreenShot\bin\Release\DocToolkit.pdb
+E:\apps\github\CoolScreenShot\CoolScreenShot\bin\Release\DrawTools.pdb
+E:\apps\github\CoolScreenShot\CoolScreenShot\obj\x86\Release\ResolveAssemblyReference.cache
+E:\apps\github\CoolScreenShot\CoolScreenShot\obj\x86\Release\CoolScreenShot.FrmAbout.resources
+E:\apps\github\CoolScreenShot\CoolScreenShot\obj\x86\Release\CoolScreenShot.MainForm.resources
+E:\apps\github\CoolScreenShot\CoolScreenShot\obj\x86\Release\CoolScreenShot.Properties.Resources.resources
+E:\apps\github\CoolScreenShot\CoolScreenShot\obj\x86\Release\CoolScreenShot.UserControls.MyColorPicker.resources
+E:\apps\github\CoolScreenShot\CoolScreenShot\obj\x86\Release\CoolScreenShot.exe
+E:\apps\github\CoolScreenShot\CoolScreenShot\bin\Release\CoolScreenShot.exe.config
+E:\apps\github\CoolScreenShot\CoolScreenShot\obj\x86\Release\GenerateResource-ResGen.read.1.tlog
+E:\apps\github\CoolScreenShot\CoolScreenShot\obj\x86\Release\GenerateResource-ResGen.write.1.tlog

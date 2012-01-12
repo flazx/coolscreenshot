@@ -1,0 +1,12 @@
+E:\apps\github\CoolScreenShot\DrawTools\bin\Release\DrawTools.dll
+E:\apps\github\CoolScreenShot\DrawTools\bin\Release\DrawTools.pdb
+E:\apps\github\CoolScreenShot\DrawTools\bin\Release\DocToolkit.dll
+E:\apps\github\CoolScreenShot\DrawTools\bin\Release\DocToolkit.pdb
+E:\apps\github\CoolScreenShot\DrawTools\obj\Release\ResolveAssemblyReference.cache
+E:\apps\github\CoolScreenShot\DrawTools\obj\Release\DrawTools.DrawArea.resources
+E:\apps\github\CoolScreenShot\DrawTools\obj\Release\DrawTools.PropertiesDialog.resources
+E:\apps\github\CoolScreenShot\DrawTools\obj\Release\DrawTools.Properties.Resources.resources
+E:\apps\github\CoolScreenShot\DrawTools\obj\Release\GenerateResource-ResGen.read.1.tlog
+E:\apps\github\CoolScreenShot\DrawTools\obj\Release\GenerateResource-ResGen.write.1.tlog
+E:\apps\github\CoolScreenShot\DrawTools\obj\Release\DrawTools.dll
+E:\apps\github\CoolScreenShot\DrawTools\obj\Release\DrawTools.pdb

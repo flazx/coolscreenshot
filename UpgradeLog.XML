@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="CoolShot">
+</Property><Property Name="解决方案文件" Value="E:\apps\github\CoolScreenShot\CoolShot.sln">
+</Property><Property Name="Date" Value="2012年1月12日">
+</Property><Property Name="Time" Value="13:17">
+</Property></Properties><Event ErrorLevel="0" Project="" Source="CoolShot.sln" Description="文件已成功备份为 E:\apps\github\CoolScreenShot\Backup\CoolShot.sln">
+</Event><Event ErrorLevel="0" Project="DocToolkit" Source="DocToolkit\DocToolkit.csproj" Description="项目文件已成功备份为 E:\apps\github\CoolScreenShot\Backup\DocToolkit\DocToolkit.csproj">
+</Event><Event ErrorLevel="0" Project="DocToolkit" Source="DocToolkit\DocManager.cs" Description="文件已成功备份为 E:\apps\github\CoolScreenShot\Backup\DocToolkit\DocManager.cs">
+</Event><Event ErrorLevel="0" Project="DocToolkit" Source="DocToolkit\DragDropManager.cs" Description="文件已成功备份为 E:\apps\github\CoolScreenShot\Backup\DocToolkit\DragDropManager.cs">
+</Event><Event ErrorLevel="0" Project="DocToolkit" Source="DocToolkit\MruManager.cs" Description="文件已成功备份为 E:\apps\github\CoolScreenShot\Backup\DocToolkit\MruManager.cs">
+</Event><Event ErrorLevel="0" Project="DocToolkit" Source="DocToolkit\PersistWindowState.cs" Description="文件已成功备份为 E:\apps\github\CoolScreenShot\Backup\DocToolkit\PersistWindowState.cs">
+</Event><Event ErrorLevel="0" Project="DocToolkit" Source="DocToolkit\Properties\AssemblyInfo.cs" Description="文件已成功备份为 E:\apps\github\CoolScreenShot\Backup\DocToolkit\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="1" Project="DocToolkit" Source="DocToolkit\DocToolkit.csproj" Description="您的项目以 .NET Framework 2.0 或 3.0 为目标。如果您的项目使用的程序集需要更新的 .NET Framework，则项目生成将失败。通过单击项目菜单上的“属性”，然后在“.NET Framework”下拉框中选择一个新版本，可以更改 .NET Framework 的版本。(在 Visual Basic 中，可在单击“高级编辑器选项...”按钮时显示的“编译”选项卡上找到此下拉框。)">
+</Event><Event ErrorLevel="0" Project="DocToolkit" Source="DocToolkit\DocToolkit.csproj" Description="项目已成功转换">
+</Event><Event ErrorLevel="3" Project="DocToolkit" Source="DocToolkit\DocToolkit.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="DrawTools" Source="DrawTools\DrawTools.csproj" Description="项目文件已成功备份为 E:\apps\github\CoolScreenShot\Backup\DrawTools\DrawTools.csproj">
+</Event><Event ErrorLevel="0" Project="DrawTools" Source="DrawTools\CommandDelete.cs" Description="文件已成功备份为 E:\apps\github\CoolScreenShot\Backup\DrawTools\CommandDelete.cs">
+</Event><Event ErrorLevel="0" Project="DrawTools" Source="DrawTools\CommandDeleteAll.cs" Description="文件已成功备份为 E:\apps\github\CoolScreenShot\Backup\DrawTools\CommandDeleteAll.cs">
+</Event><Event ErrorLevel="0" Project="DrawTools" Source="DrawTools\Command.cs" Description="文件已成功备份为 E:\apps\github\CoolScreenShot\Backup\DrawTools\Command.cs">
+</Event><Event ErrorLevel="0" Project="DrawTools" Source="DrawTools\CommandAdd.cs" Description="文件已成功备份为 E:\apps\github\CoolScreenShot\Backup\DrawTools\CommandAdd.cs">
+</Event><Event ErrorLevel="0" Project="DrawTools" Source="DrawTools\CommandChangeState.cs" Description="文件已成功备份为 E:\apps\github\CoolScreenShot\Backup\DrawTools\CommandChangeState.cs">
+</Event><Event ErrorLevel="0" Project="DrawTools" Source="DrawTools\DrawArea.cs" Description="文件已成功备份为 E:\apps\github\CoolScreenShot\Backup\DrawTools\DrawArea.cs">
+</Event><Event ErrorLevel="0" Project="DrawTools" Source="DrawTools\DrawArea.Designer.cs" Description="文件已成功备份为 E:\apps\github\CoolScreenShot\Backup\DrawTools\DrawArea.Designer.cs">
+</Event><Event ErrorLevel="0" Project="DrawTools" Source="DrawTools\DrawAreaRectangle.cs" Description="文件已成功备份为 E:\apps\github\CoolScreenShot\Backup\DrawTools\DrawAreaRectangle.cs">
+</Event><Event ErrorLevel="0" Project="DrawTools" Source="DrawTools\DrawArrow.cs" Description="文件已成功备份为 E:\apps\github\CoolScreenShot\Backup\DrawTools\DrawArrow.cs">
+</Event><Event ErrorLevel="0" Project="DrawTools" Source="DrawTools\DrawEllipse.cs" Description="文件已成功备份为 E:\apps\github\CoolScreenShot\Backup\DrawTools\DrawEllipse.cs">
+</Event><Event ErrorLevel="0" Project="DrawTools" Source="DrawTools\DrawLine.cs" Description="文件已成功备份为 E:\apps\github\CoolScreenShot\Backup\DrawTools\DrawLine.cs">
+</Event><Event ErrorLevel="0" Project="DrawTools" Source="DrawTools\DrawObject.cs" Description="文件已成功备份为 E:\apps\github\CoolScreenShot\Backup\DrawTools\DrawObject.cs">
+</Event><Event ErrorLevel="0" Project="DrawTools" Source="DrawTools\DrawPolygon.cs" Description="文件已成功备份为 E:\apps\github\CoolScreenShot\Backup\DrawTools\DrawPolygon.cs">
+</Event><Event ErrorLevel="0" Project="DrawTools" Source="DrawTools\DrawRectangle.cs" Description="文件已成功备份为 E:\apps\github\CoolScreenShot\Backup\DrawTools\DrawRectangle.cs">
+</Event><Event ErrorLevel="0" Project="DrawTools" Source="DrawTools\DrawText.cs" Description="文件已成功备份为 E:\apps\github\CoolScreenShot\Backup\DrawTools\DrawText.cs">
+</Event><Event ErrorLevel="0" Project="DrawTools" Source="DrawTools\GraphicsList.cs" Description="文件已成功备份为 E:\apps\github\CoolScreenShot\Backup\DrawTools\GraphicsList.cs">
+</Event><Event ErrorLevel="0" Project="DrawTools" Source="DrawTools\IDrawAreaOwner.cs" Description="文件已成功备份为 E:\apps\github\CoolScreenShot\Backup\DrawTools\IDrawAreaOwner.cs">
+</Event><Event ErrorLevel="0" Project="DrawTools" Source="DrawTools\LayeredForm.cs" Description="文件已成功备份为 E:\apps\github\CoolScreenShot\Backup\DrawTools\LayeredForm.cs">
+</Event><Event ErrorLevel="0" Project="DrawTools" Source="DrawTools\GraphicsProperties.cs" Description="文件已成功备份为 E:\apps\github\CoolScreenShot\Backup\DrawTools\GraphicsProperties.cs">
+</Event><Event ErrorLevel="0" Project="DrawTools" Source="DrawTools\NativeMethods.cs" Description="文件已成功备份为 E:\apps\github\CoolScreenShot\Backup\DrawTools\NativeMethods.cs">
+</Event><Event ErrorLevel="0" Project="DrawTools" Source="DrawTools\PaintLayerEventArgs.cs" Description="文件已成功备份为 E:\apps\github\CoolScreenShot\Backup\DrawTools\PaintLayerEventArgs.cs">
+</Event><Event ErrorLevel="0" Project="DrawTools" Source="DrawTools\PropertiesDialog.cs" Description="文件已成功备份为 E:\apps\github\CoolScreenShot\Backup\DrawTools\PropertiesDialog.cs">
+</Event><Event ErrorLevel="0" Project="DrawTools" Source="DrawTools\PropertiesDialog.Designer.cs" Description="文件已成功备份为 E:\apps\github\CoolScreenShot\Backup\DrawTools\PropertiesDialog.Designer.cs">
+</Event><Event ErrorLevel="0" Project="DrawTools" Source="DrawTools\Properties\AssemblyInfo.cs" Description="文件已成功备份为 E:\apps\github\CoolScreenShot\Backup\DrawTools\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="DrawTools" Source="DrawTools\ToolText.cs" Description="文件已成功备份为 E:\apps\github\CoolScreenShot\Backup\DrawTools\ToolText.cs">
+</Event><Event ErrorLevel="0" Project="DrawTools" Source="DrawTools\Properties\Resources.Designer.cs" Description="文件已成功备份为 E:\apps\github\CoolScreenShot\Backup\DrawTools\Properties\Resources.Designer.cs">
+</Event><Event ErrorLevel="0" Project="DrawTools" Source="DrawTools\Properties\Settings.Designer.cs" Description="文件已成功备份为 E:\apps\github\CoolScreenShot\Backup\DrawTools\Properties\Settings.Designer.cs">
+</Event><Event ErrorLevel="0" Project="DrawTools" Source="DrawTools\Tool.cs" Description="文件已成功备份为 E:\apps\github\CoolScreenShot\Backup\DrawTools\Tool.cs">
+</Event><Event ErrorLevel="0" Project="DrawTools" Source="DrawTools\ToolEllipse.cs" Description="文件已成功备份为 E:\apps\github\CoolScreenShot\Backup\DrawTools\ToolEllipse.cs">
+</Event><Event ErrorLevel="0" Project="DrawTools" Source="DrawTools\ToolLine.cs" Description="文件已成功备份为 E:\apps\github\CoolScreenShot\Backup\DrawTools\ToolLine.cs">
+</Event><Event ErrorLevel="0" Project="DrawTools" Source="DrawTools\ToolObject.cs" Description="文件已成功备份为 E:\apps\github\CoolScreenShot\Backup\DrawTools\ToolObject.cs">
+</Event><Event ErrorLevel="0" Project="DrawTools" Source="DrawTools\ToolPointer.cs" Description="文件已成功备份为 E:\apps\github\CoolScreenShot\Backup\DrawTools\ToolPointer.cs">
+</Event><Event ErrorLevel="0" Project="DrawTools" Source="DrawTools\ToolPolygon.cs" Description="文件已成功备份为 E:\apps\github\CoolScreenShot\Backup\DrawTools\ToolPolygon.cs">
+</Event><Event ErrorLevel="0" Project="DrawTools" Source="DrawTools\ToolRectangle.cs" Description="文件已成功备份为 E:\apps\github\CoolScreenShot\Backup\DrawTools\ToolRectangle.cs">
+</Event><Event ErrorLevel="0" Project="DrawTools" Source="DrawTools\UndoManager.cs" Description="文件已成功备份为 E:\apps\github\CoolScreenShot\Backup\DrawTools\UndoManager.cs">
+</Event><Event ErrorLevel="0" Project="DrawTools" Source="DrawTools\Properties\Settings.settings" Description="文件已成功备份为 E:\apps\github\CoolScreenShot\Backup\DrawTools\Properties\Settings.settings">
+</Event><Event ErrorLevel="0" Project="DrawTools" Source="DrawTools\DrawArea.resx" Description="文件已成功备份为 E:\apps\github\CoolScreenShot\Backup\DrawTools\DrawArea.resx">
+</Event><Event ErrorLevel="0" Project="DrawTools" Source="DrawTools\PropertiesDialog.resx" Description="文件已成功备份为 E:\apps\github\CoolScreenShot\Backup\DrawTools\PropertiesDialog.resx">
+</Event><Event ErrorLevel="0" Project="DrawTools" Source="DrawTools\Properties\Resources.resx" Description="文件已成功备份为 E:\apps\github\CoolScreenShot\Backup\DrawTools\Properties\Resources.resx">
+</Event><Event ErrorLevel="0" Project="DrawTools" Source="DrawTools\Rectangle.cur" Description="文件已成功备份为 E:\apps\github\CoolScreenShot\Backup\DrawTools\Rectangle.cur">
+</Event><Event ErrorLevel="0" Project="DrawTools" Source="DrawTools\Ellipse.cur" Description="文件已成功备份为 E:\apps\github\CoolScreenShot\Backup\DrawTools\Ellipse.cur">
+</Event><Event ErrorLevel="0" Project="DrawTools" Source="DrawTools\Line.cur" Description="文件已成功备份为 E:\apps\github\CoolScreenShot\Backup\DrawTools\Line.cur">
+</Event><Event ErrorLevel="0" Project="DrawTools" Source="DrawTools\Pencil.cur" Description="文件已成功备份为 E:\apps\github\CoolScreenShot\Backup\DrawTools\Pencil.cur">
+</Event><Event ErrorLevel="0" Project="DrawTools" Source="DrawTools\PolyHandle.cur" Description="文件已成功备份为 E:\apps\github\CoolScreenShot\Backup\DrawTools\PolyHandle.cur">
+</Event><Event ErrorLevel="1" Project="DrawTools" Source="DrawTools\DrawTools.csproj" Description="您的项目以 .NET Framework 2.0 或 3.0 为目标。如果您的项目使用的程序集需要更新的 .NET Framework，则项目生成将失败。通过单击项目菜单上的“属性”，然后在“.NET Framework”下拉框中选择一个新版本，可以更改 .NET Framework 的版本。(在 Visual Basic 中，可在单击“高级编辑器选项...”按钮时显示的“编译”选项卡上找到此下拉框。)">
+</Event><Event ErrorLevel="0" Project="DrawTools" Source="DrawTools\DrawTools.csproj" Description="项目已成功转换">
+</Event><Event ErrorLevel="3" Project="DrawTools" Source="DrawTools\DrawTools.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="CoolScreenShot" Source="CoolScreenShot\CoolScreenShot.csproj" Description="项目文件已成功备份为 E:\apps\github\CoolScreenShot\Backup\CoolScreenShot\CoolScreenShot.csproj">
+</Event><Event ErrorLevel="0" Project="CoolScreenShot" Source="CoolScreenShot\CoolShotApplicationContext.cs" Description="文件已成功备份为 E:\apps\github\CoolScreenShot\Backup\CoolScreenShot\CoolShotApplicationContext.cs">
+</Event><Event ErrorLevel="0" Project="CoolScreenShot" Source="CoolScreenShot\ProxyForm.cs" Description="文件已成功备份为 E:\apps\github\CoolScreenShot\Backup\CoolScreenShot\ProxyForm.cs">
+</Event><Event ErrorLevel="0" Project="CoolScreenShot" Source="CoolScreenShot\ProxyForm.Designer.cs" Description="文件已成功备份为 E:\apps\github\CoolScreenShot\Backup\CoolScreenShot\ProxyForm.Designer.cs">
+</Event><Event ErrorLevel="0" Project="CoolScreenShot" Source="CoolScreenShot\FrmAbout.cs" Description="文件已成功备份为 E:\apps\github\CoolScreenShot\Backup\CoolScreenShot\FrmAbout.cs">
+</Event><Event ErrorLevel="0" Project="CoolScreenShot" Source="CoolScreenShot\FrmAbout.Designer.cs" Description="文件已成功备份为 E:\apps\github\CoolScreenShot\Backup\CoolScreenShot\FrmAbout.Designer.cs">
+</Event><Event ErrorLevel="0" Project="CoolScreenShot" Source="CoolScreenShot\Hotkey.cs" Description="文件已成功备份为 E:\apps\github\CoolScreenShot\Backup\CoolScreenShot\Hotkey.cs">
+</Event><Event ErrorLevel="0" Project="CoolScreenShot" Source="CoolScreenShot\NativeMethods.cs" Description="文件已成功备份为 E:\apps\github\CoolScreenShot\Backup\CoolScreenShot\NativeMethods.cs">
+</Event><Event ErrorLevel="0" Project="CoolScreenShot" Source="CoolScreenShot\Program.cs" Description="文件已成功备份为 E:\apps\github\CoolScreenShot\Backup\CoolScreenShot\Program.cs">
+</Event><Event ErrorLevel="0" Project="CoolScreenShot" Source="CoolScreenShot\Properties\AssemblyInfo.cs" Description="文件已成功备份为 E:\apps\github\CoolScreenShot\Backup\CoolScreenShot\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="CoolScreenShot" Source="CoolScreenShot\MainForm.cs" Description="文件已成功备份为 E:\apps\github\CoolScreenShot\Backup\CoolScreenShot\MainForm.cs">
+</Event><Event ErrorLevel="0" Project="CoolScreenShot" Source="CoolScreenShot\MainForm.Designer.cs" Description="文件已成功备份为 E:\apps\github\CoolScreenShot\Backup\CoolScreenShot\MainForm.Designer.cs">
+</Event><Event ErrorLevel="0" Project="CoolScreenShot" Source="CoolScreenShot\UserControls\ColorItemButton.cs" Description="文件已成功备份为 E:\apps\github\CoolScreenShot\Backup\CoolScreenShot\UserControls\ColorItemButton.cs">
+</Event><Event ErrorLevel="0" Project="CoolScreenShot" Source="CoolScreenShot\UserControls\MyColorPicker.cs" Description="文件已成功备份为 E:\apps\github\CoolScreenShot\Backup\CoolScreenShot\UserControls\MyColorPicker.cs">
+</Event><Event ErrorLevel="0" Project="CoolScreenShot" Source="CoolScreenShot\UserControls\MyColorPicker.Designer.cs" Description="文件已成功备份为 E:\apps\github\CoolScreenShot\Backup\CoolScreenShot\UserControls\MyColorPicker.Designer.cs">
+</Event><Event ErrorLevel="0" Project="CoolScreenShot" Source="CoolScreenShot\icon.ico" Description="文件已成功备份为 E:\apps\github\CoolScreenShot\Backup\CoolScreenShot\icon.ico">
+</Event><Event ErrorLevel="0" Project="CoolScreenShot" Source="CoolScreenShot\FrmAbout.resx" Description="文件已成功备份为 E:\apps\github\CoolScreenShot\Backup\CoolScreenShot\FrmAbout.resx">
+</Event><Event ErrorLevel="0" Project="CoolScreenShot" Source="CoolScreenShot\MainForm.resx" Description="文件已成功备份为 E:\apps\github\CoolScreenShot\Backup\CoolScreenShot\MainForm.resx">
+</Event><Event ErrorLevel="0" Project="CoolScreenShot" Source="CoolScreenShot\UserControls\MyColorPicker.resx" Description="文件已成功备份为 E:\apps\github\CoolScreenShot\Backup\CoolScreenShot\UserControls\MyColorPicker.resx">
+</Event><Event ErrorLevel="0" Project="CoolScreenShot" Source="CoolScreenShot\CoolScreenShot.csproj" Description="项目文件不需要转换。">
+</Event><Event ErrorLevel="3" Project="CoolScreenShot" Source="CoolScreenShot\CoolScreenShot.csproj" Description="无需转换">
+</Event><Event ErrorLevel="0" Project="" Source="CoolShot.sln" Description="解决方案文件不需要转换。">
+</Event><Event ErrorLevel="3" Project="" Source="CoolShot.sln" Description="无需转换">
+</Event><Event ErrorLevel="0" Project="DocToolkit" Source="DocToolkit\DocToolkit.csproj" Description="扫描完成: 项目文件不需要升级。">
+</Event><Event ErrorLevel="0" Project="DrawTools" Source="DrawTools\DrawTools.csproj" Description="扫描完成: 项目文件不需要升级。">
+</Event></UpgradeLog>

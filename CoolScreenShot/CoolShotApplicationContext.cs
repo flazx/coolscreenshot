@@ -45,7 +45,7 @@ namespace CoolScreenShot
 			// 
 			this.notifyIcon.ContextMenu = this.notifyIconContextMenu;
 			this.notifyIcon.DoubleClick += new System.EventHandler(this.calendarNotifyIcon_DoubleClick);
-			this.notifyIcon.Icon = new Icon(Application.StartupPath + "\\icon.ico");
+            this.notifyIcon.Icon = CoolScreenShot.Properties.Resources.SystemIcon;
 			this.notifyIcon.Text = DateTime.Now.ToLongDateString();
 			this.notifyIcon.Visible = true;
 			// 
@@ -57,7 +57,7 @@ namespace CoolScreenShot
 			// showContextMenuItem
 			// 
 			this.showContextMenuItem.Index = 0;
-			this.showContextMenuItem.Text = "&Show Cool Shot";
+			this.showContextMenuItem.Text = "&Start Screen Shot (Ctrl+Win+A)";
 			this.showContextMenuItem.DefaultItem = true;
 			this.showContextMenuItem.Click += new System.EventHandler(this.showContextMenuItem_Click);
 
