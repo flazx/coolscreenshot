@@ -120,24 +120,26 @@
   <assembly alias="System.Drawing" name="System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        AAABAAIAICAQAAAAAADoAgAAJgAAABAQEAAAAAAAKAEAAA4DAAAoAAAAIAAAAEAAAAABAAQAAAAAAAAC
-        AAAAAAAAAAAAABAAAAAQAAAAAAAAAAAAgAAAgAAAAICAAIAAAACAAIAAgIAAAICAgADAwMAAAAD/AAD/
-        AAAA//8A/wAAAP8A/wD//wAA////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//////////////AAAAAA
-        D//////////////wAAAAAA//////////////8AAAAAAP//////////////AAAAAAD//////////////w
-        AAAAAA//////////////8AAAAAAP//////////////AAAAAAD//////////////wAAAAAA//////////
-        ////8AAAAAAP//////////////AAAAAAD//////////////wAAAAAA//////////////8AAAAAAP////
-        //////////AAAAAAD//////////////wAAAAAA//////////////8AAAAAAP//////////////AAAAAA
-        D//////////////wAAAAAA//////////////8AAAAAAP//////////////AAAAAAD//////////////w
-        AAAAAA//////////////8AAAAAAP//////////////AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAoAAAAEAAAACAAAAABAAQAAAAAAIAAAAAAAAAAAAAAABAAAAAQAAAAAAAAAAAAgAAAgAAAAICAAIAA
-        AACAAIAAgIAAAICAgADAwMAAAAD/AAD/AAAA//8A/wAAAP8A/wD//wAA////AAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAD/////AAAAAP////8AAAAA/////wAAAAD/////AAAAAP////8AAAAA
-        /////wAAAAD/////AAAAAP////8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==
+        AAABAAEAEBAAAAAAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAQAQAAAAAAAAAAAAAAAAAAAAA
+        AAAAAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA//////////////////////////////////////////////////////8AAAD/////////
+        ////////AAAA/wAAAP//////////////////////////////////////////////////////AAAA////
+        /////////////wAAAP8AAAD/////////////////////////////////////////////////AAAA/wAA
+        AP8AAAD///////////8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP//////////////////////////////////////////////
+        //8AAAD/AAAA/wAAAP///////////wAAAP8AAAD/////////////////////////////////////////
+        /////////////wAAAP////////////////8AAAD/AAAA/////////////////wAAAP8AAAD/AAAA/wAA
+        AP////////////////8AAAD/////////////////AAAA/wAAAP////////////////8AAAD/////////
+        ////////////////////////AAAA/////////////////wAAAP8AAAD/////////////////AAAA////
+        /////////////////////////////wAAAP////////////////8AAAD/AAAA/////////////////wAA
+        AP////////////////////////////////8AAAD/////////////////AAAA/wAAAP//////////////
+        //8AAAD/AAAA/wAAAP8AAAD/////////////////AAAA/////////////////wAAAP8AAAD/////////
+        /////////////////////////////////////////////wAAAP////////////////8AAAD/AAAA////
+        //////////////////////////////////////////////////8AAAD/////////////////AAAA/wAA
+        AP//////////////////////////////////////////////////////AAAA/////////////////wAA
+        AP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAAAP8AAAD/AAAA/wAA
+        AP8AAAD/AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA//8AAP//AAD//wAA
+        //8AAP//AAD//w==
 </value>
   </data>
 </root>

@@ -3,3 +3,13 @@ E:\apps\github\CoolScreenShot\DocToolkit\bin\Debug\DocToolkit.pdb
 E:\apps\github\CoolScreenShot\DocToolkit\obj\Debug\ResolveAssemblyReference.cache
 E:\apps\github\CoolScreenShot\DocToolkit\obj\Debug\DocToolkit.dll
 E:\apps\github\CoolScreenShot\DocToolkit\obj\Debug\DocToolkit.pdb
+F:\QBox\63293309\CoolScreenShot\DocToolkit\bin\Debug\DocToolkit.dll
+F:\QBox\63293309\CoolScreenShot\DocToolkit\bin\Debug\DocToolkit.pdb
+F:\QBox\63293309\CoolScreenShot\DocToolkit\obj\Debug\ResolveAssemblyReference.cache
+F:\QBox\63293309\CoolScreenShot\DocToolkit\obj\Debug\DocToolkit.dll
+F:\QBox\63293309\CoolScreenShot\DocToolkit\obj\Debug\DocToolkit.pdb
+D:\QBox\63293309\CoolScreenShot\DocToolkit\bin\Debug\DocToolkit.dll
+D:\QBox\63293309\CoolScreenShot\DocToolkit\bin\Debug\DocToolkit.pdb
+D:\QBox\63293309\CoolScreenShot\DocToolkit\obj\Debug\ResolveAssemblyReference.cache
+D:\QBox\63293309\CoolScreenShot\DocToolkit\obj\Debug\DocToolkit.dll
+D:\QBox\63293309\CoolScreenShot\DocToolkit\obj\Debug\DocToolkit.pdb

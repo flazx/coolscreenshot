@@ -96,6 +96,9 @@
     <Compile Include="DrawPolygon.cs" />
     <Compile Include="DrawRectangle.cs" />
     <Compile Include="DrawText.cs" />
+    <Compile Include="ExpandTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="GraphicsList.cs" />
     <Compile Include="IDrawAreaOwner.cs" />
     <Compile Include="LayeredForm.cs">

@@ -4,9 +4,9 @@
 "ProjectType" = "8:{978C614F-708E-4E1A-B201-565925725DBA}"
 "IsWebType" = "8:FALSE"
 "ProjectName" = "8:CoolScreenShotSetup"
-"LanguageId" = "3:2052"
-"CodePage" = "3:936"
-"UILanguageId" = "3:2052"
+"LanguageId" = "3:1033"
+"CodePage" = "3:1252"
+"UILanguageId" = "3:1033"
 "SccProjectName" = "8:"
 "SccLocalPath" = "8:"
 "SccAuxPath" = "8:"
@@ -15,7 +15,13 @@
     {
         "Entry"
         {
-        "MsmKey" = "8:_3A612FECB651422E92AC944C9636E45E"
+        "MsmKey" = "8:_0CCE706E3CA74AB1A76B7E45D87B2AF4"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_401AAD6BC3EE4468972BA40BEB51CA1E"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -27,12 +33,24 @@
         }
         "Entry"
         {
+        "MsmKey" = "8:_90D1A806C30845BB8F9E79A4A9B8797D"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_90E07E46A0BF120F79C9F2D51E36D740"
         "OwnerKey" = "8:_4D1D571D05CB4D76A019D59ADFE8FC1C"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
+        "MsmKey" = "8:_C6AA94CA512D4FCABE8223FB2518F4B1"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_F997393F18BF299D8B6AF21690DAA35D"
         "OwnerKey" = "8:_4D1D571D05CB4D76A019D59ADFE8FC1C"
         "MsmSig" = "8:_UNDEFINED"
@@ -40,6 +58,18 @@
         "Entry"
         {
         "MsmKey" = "8:_F997393F18BF299D8B6AF21690DAA35D"
+        "OwnerKey" = "8:_90E07E46A0BF120F79C9F2D51E36D740"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_4D1D571D05CB4D76A019D59ADFE8FC1C"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_90E07E46A0BF120F79C9F2D51E36D740"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -52,13 +82,7 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_4D1D571D05CB4D76A019D59ADFE8FC1C"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_90E07E46A0BF120F79C9F2D51E36D740"
+        "OwnerKey" = "8:_401AAD6BC3EE4468972BA40BEB51CA1E"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -79,6 +103,27 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.0,Profile=Client"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4 Client Profile (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.0,Profile=Client"
+                    }
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:Microsoft.Windows.Installer.3.1"
+                    {
+                    "Name" = "8:Windows Installer 3.1"
+                    "ProductCode" = "8:Microsoft.Windows.Installer.3.1"
+                    }
+                }
+            }
         }
         "Release"
         {
@@ -95,6 +140,27 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+                "Items"
+                {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.0,Profile=Client"
+                    {
+                    "Name" = "8:Microsoft .NET Framework 4 Client Profile (x86 and x64)"
+                    "ProductCode" = "8:.NETFramework,Version=v4.0,Profile=Client"
+                    }
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:Microsoft.Windows.Installer.3.1"
+                    {
+                    "Name" = "8:Windows Installer 3.1"
+                    "ProductCode" = "8:Microsoft.Windows.Installer.3.1"
+                    }
+                }
+            }
         }
     }
     "Deployable"
@@ -124,10 +190,30 @@
         }
         "File"
         {
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_3A612FECB651422E92AC944C9636E45E"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_0CCE706E3CA74AB1A76B7E45D87B2AF4"
             {
-            "SourcePath" = "8:..\\CoolScreenShot\\icon.ico"
+            "SourcePath" = "8:..\\CoolScreenShot\\icon16x16.ico"
             "TargetName" = "8:icon.ico"
+            "Tag" = "8:"
+            "Folder" = "8:_004358CC947D47E3BA09384EC3615EBA"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_90D1A806C30845BB8F9E79A4A9B8797D"
+            {
+            "SourcePath" = "8:..\\CoolScreenShot\\icon16x16.ico"
+            "TargetName" = "8:icon16x16.ico"
             "Tag" = "8:"
             "Folder" = "8:_004358CC947D47E3BA09384EC3615EBA"
             "Condition" = "8:"
@@ -173,6 +259,26 @@
             "Register" = "3:1"
             "Exclude" = "11:FALSE"
             "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_C6AA94CA512D4FCABE8223FB2518F4B1"
+            {
+            "SourcePath" = "8:..\\CoolScreenShot\\icon32x32.ico"
+            "TargetName" = "8:icon32x32.ico"
+            "Tag" = "8:"
+            "Folder" = "8:_004358CC947D47E3BA09384EC3615EBA"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
             "IsolateTo" = "8:"
             }
             "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_F997393F18BF299D8B6AF21690DAA35D"
@@ -238,7 +344,7 @@
             "{1525181F-901A-416C-8A58-119130FE478E}:_B54F634E2BC04D5BA9646FE6E0702603"
             {
             "Name" = "8:#1919"
-            "AlwaysCreate" = "11:FALSE"
+            "AlwaysCreate" = "11:TRUE"
             "Condition" = "8:"
             "Transitive" = "11:FALSE"
             "Property" = "8:ProgramMenuFolder"
@@ -255,7 +361,7 @@
         }
         "MsiBootstrapper"
         {
-        "LangId" = "3:2052"
+        "LangId" = "3:1033"
         "RequiresElevation" = "11:FALSE"
         }
         "Product"
@@ -263,7 +369,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:CoolScreenShotSetup"
         "ProductCode" = "8:{563D974D-8934-4321-BC96-EC55D34563E0}"
-        "PackageCode" = "8:{C942CC39-42D5-44F8-8B97-06571BBDA34E}"
+        "PackageCode" = "8:{9178D61D-7EA3-4D0B-8C40-C2449D76DBE0}"
         "UpgradeCode" = "8:{25F5FE06-CD2E-40C9-B1E5-6C27208035A6}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
@@ -280,7 +386,7 @@
         "Keywords" = "8:"
         "ARPCOMMENTS" = "8:"
         "ARPURLINFOABOUT" = "8:"
-        "ARPPRODUCTICON" = "8:"
+        "ARPPRODUCTICON" = "8:_0CCE706E3CA74AB1A76B7E45D87B2AF4"
         "ARPIconIndex" = "3:0"
         "SearchPath" = "8:"
         "UseSystemSearchPath" = "11:TRUE"
@@ -383,9 +489,9 @@
         }
         "Shortcut"
         {
-            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_D1A6E7C779E9429583209FED7D014D90"
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_22487BE3171F442F9D7EBE7C07E4DD5C"
             {
-            "Name" = "8:CoolShot"
+            "Name" = "8:Coolshot"
             "Arguments" = "8:"
             "Description" = "8:"
             "ShowCmd" = "3:1"
@@ -394,7 +500,21 @@
             "Target" = "8:_4D1D571D05CB4D76A019D59ADFE8FC1C"
             "Folder" = "8:_516E46AC44404E02B5820D3C1C6B453B"
             "WorkingFolder" = "8:_004358CC947D47E3BA09384EC3615EBA"
-            "Icon" = "8:_3A612FECB651422E92AC944C9636E45E"
+            "Icon" = "8:_C6AA94CA512D4FCABE8223FB2518F4B1"
+            "Feature" = "8:"
+            }
+            "{970C0BB2-C7D0-45D7-ABFA-7EC378858BC0}:_8FB6DCBB96C742AF870A56E9EEF248AB"
+            {
+            "Name" = "8:Coolshot"
+            "Arguments" = "8:"
+            "Description" = "8:"
+            "ShowCmd" = "3:1"
+            "IconIndex" = "3:0"
+            "Transitive" = "11:FALSE"
+            "Target" = "8:_4D1D571D05CB4D76A019D59ADFE8FC1C"
+            "Folder" = "8:_B54F634E2BC04D5BA9646FE6E0702603"
+            "WorkingFolder" = "8:_004358CC947D47E3BA09384EC3615EBA"
+            "Icon" = "8:_0CCE706E3CA74AB1A76B7E45D87B2AF4"
             "Feature" = "8:"
             }
         }
@@ -796,6 +916,34 @@
         }
         "ProjectOutput"
         {
+            "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_401AAD6BC3EE4468972BA40BEB51CA1E"
+            {
+            "SourcePath" = "8:..\\DocToolkit\\obj\\Release\\DocToolkit.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_004358CC947D47E3BA09384EC3615EBA"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            "ProjectOutputGroupRegister" = "3:1"
+            "OutputConfiguration" = "8:Release|Any CPU"
+            "OutputGroupCanonicalName" = "8:Built"
+            "OutputProjectGuid" = "8:{7E3B9E32-DC2B-4E59-839A-42B8D4D4E5F4}"
+            "ShowKeyOutput" = "11:TRUE"
+                "ExcludeFilters"
+                {
+                }
+            }
             "{5259A561-127C-4D43-A0A1-72F10C7B3BF8}:_4D1D571D05CB4D76A019D59ADFE8FC1C"
             {
             "SourcePath" = "8:..\\CoolScreenShot\\obj\\x86\\Release\\CoolScreenShot.exe"

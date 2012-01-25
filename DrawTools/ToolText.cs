@@ -26,7 +26,7 @@ namespace DrawTools
 
         public override void OnMouseDown(DrawArea drawArea, MouseEventArgs e)
         {
-        	DrawText drawText = new DrawText("", e.X, e.Y);
+        	DrawText drawText = new DrawText("", new Rectangle(new Point(e.X,e.Y), new Size(0,0)));
             AddNewObject(drawArea, drawText);
             drawArea.ToolTextBox.Text = "";
             drawArea.ToolTextBox.Visible = true;

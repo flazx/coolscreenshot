@@ -20,9 +20,10 @@ namespace DrawTools
 	public class DrawText: DrawObject
 	{
         private const string entryText = "Text";
-        private PointF startPoint;
-        private PointF endPoint;
         private bool isJustCreated;
+
+        Rectangle area;
+        public Rectangle Area { get { return this.area; } set { this.area = value; } }
 
         private String text;
         public String Text{
@@ -44,18 +45,15 @@ namespace DrawTools
         }
         
         
-		public DrawText() : this("", 0, 0)
+		public DrawText() : this("", new Rectangle())
 		{
 		}
 
         
-        public DrawText(string text, int x, int y) : base()
+        public DrawText(string text, Rectangle area) : base()
         {
             this.text = text;
-            this.startPoint.X = x;
-            this.startPoint.Y = y;
-            
-            this.endPoint.Y = this.startPoint.Y;
+            this.area = area;
             
             isJustCreated = true;
             Initialize();
@@ -68,7 +66,7 @@ namespace DrawTools
         {
             DrawText drawText = new DrawText();
             drawText.text = this.text;
-            drawText.startPoint = this.startPoint;
+            drawText.area = this.area;
 
             FillDrawObjectFields(drawText);
             return drawText;
@@ -78,14 +76,7 @@ namespace DrawTools
         {
             Brush brush = new SolidBrush(Color);
 
-            g.DrawString(this.text, new Font("Arial", 8),brush, startPoint.X, startPoint.Y);
-            
-            System.Diagnostics.Trace.WriteLine(String.Format("{0} -- {1}", startPoint.X, startPoint.Y));
-            
-            SizeF s = g.MeasureString(this.text,new Font("Arial", 8));
-                                      
-            this.endPoint.X = this.startPoint.X + s.Width;
-            this.endPoint.Y = this.startPoint.Y;
+            g.DrawString(this.text, new Font("Arial", 8),brush, this.area);
 
             brush.Dispose();
         }
@@ -105,7 +96,7 @@ namespace DrawTools
         /// <returns></returns>
         public override Point GetHandle(int handleNumber)
         {
-        	return new Point((int)startPoint.X, (int)startPoint.Y);
+            return new Point((int)this.area.Location.X, (int)this.area.Location.Y);
         }
         
         public override int HitTest(Point point)
@@ -129,20 +120,18 @@ namespace DrawTools
         
 		protected override bool PointInObject(Point point)
 		{
-			return new RectangleF(startPoint, new SizeF(endPoint.X - startPoint.X, 50))
-				.Contains(point);
+			return this.area.Contains(point);
 		}
         
          public override void MoveHandleTo(Point point, int handleNumber)
         {
             if ( handleNumber == 1 )
-                startPoint = point;
+                this.area.Location = point;
         }
          
         public override void Move(int deltaX, int deltaY)
         {
-            startPoint.X += deltaX;
-            startPoint.Y += deltaY;
+            this.area.Location = new Point(this.area.Location.X + deltaX, this.area.Location.Y + deltaY);
         }
 	}
 }

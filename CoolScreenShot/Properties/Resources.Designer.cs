@@ -66,5 +66,12 @@ namespace CoolScreenShot.Properties {
                 return ((System.Drawing.Icon)(obj));
             }
         }
+        
+        internal static System.Drawing.Icon SystemIconBigger {
+            get {
+                object obj = ResourceManager.GetObject("SystemIconBigger", resourceCulture);
+                return ((System.Drawing.Icon)(obj));
+            }
+        }
     }
 }

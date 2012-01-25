@@ -14,7 +14,7 @@ namespace DrawTools
     public partial class DrawArea : UserControl
     {
         #region Constructor
-
+        
         public DrawArea()
         {
             InitializeComponent();
@@ -88,7 +88,7 @@ namespace DrawTools
             }
         }
 
-        public TextBox ToolTextBox
+        public ExpandTextBox ToolTextBox
         {
             get
             {
@@ -198,6 +198,14 @@ namespace DrawTools
             tools[(int)DrawToolType.Text] = new ToolText();
         }
 
+        public void ClearDrawObjects() {
+            activeTool = DrawToolType.Pointer;
+            graphicsList = new GraphicsList();
+            undoManager = new UndoManager(graphicsList);
+            this.SetDirty();
+            this.Refresh();
+        }
+
         /// <summary>
         /// Add command to history.
         /// </summary>
@@ -248,7 +256,6 @@ namespace DrawTools
         private void OnContextMenu(MouseEventArgs e)
         {
             // Change current selection if necessary
-
             Point point = new Point(e.X, e.Y);
 
             int n = GraphicsList.Count;
@@ -362,13 +369,14 @@ namespace DrawTools
 	        if(drawText != null){
 	        	if(drawText.IsJustCreated){
 	        		this.toolTextBox.Visible = true;
+                    this.toolTextBox.Location = new Point(e.X, e.Y);
 	        	}
-	        	else{
+	        	else
+                {
 	        		//drawText.Text = this.toolTextBox.Text;
 	        		drawText.IsJustCreated = false;
 	        		//this.toolTextBox.Text = "";
-	        		this.toolTextBox.Visible= false;
-		        	
+                    this.toolTextBox.Visible = false;
 	        		this.Refresh();
 	        	}
 		     }
@@ -401,7 +409,6 @@ namespace DrawTools
 
         #endregion Event Handlers
         
-        
         #region Transparent BG
         private Image originalBackgroundImage;
         public Image OriginalBackgroundImage { 
@@ -428,9 +435,12 @@ namespace DrawTools
         	//draw text
             DrawObject o = graphicsList[0];
 	        DrawText drawText = o as DrawText;
-	        
-	        if(drawText != null)
-	        	drawText.Text = this.toolTextBox.Text;
+
+            if (drawText != null)
+            {
+                drawText.Text = this.toolTextBox.Text;
+                drawText.Area = new Rectangle(this.toolTextBox.Location, this.toolTextBox.Size);
+            }
         }
-}
+    }
 }

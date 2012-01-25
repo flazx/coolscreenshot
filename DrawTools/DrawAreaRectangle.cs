@@ -23,7 +23,7 @@ namespace DrawTools
         /// <param name="g"></param>
         public override void Draw(Graphics g)
         {
-            Pen pen = new Pen(Color.FromArgb(255,0,122,236), PenWidth);
+            Pen pen = new Pen(Color.FromArgb(255,0,122,236), 1);
 
             g.DrawRectangle(pen, DrawRectangle.GetNormalizedRectangle(Rectangle));
 

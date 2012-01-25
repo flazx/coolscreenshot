@@ -10,3 +10,15 @@ E:\apps\github\CoolScreenShot\DrawTools\obj\Release\GenerateResource-ResGen.read
 E:\apps\github\CoolScreenShot\DrawTools\obj\Release\GenerateResource-ResGen.write.1.tlog
 E:\apps\github\CoolScreenShot\DrawTools\obj\Release\DrawTools.dll
 E:\apps\github\CoolScreenShot\DrawTools\obj\Release\DrawTools.pdb
+D:\QBox\63293309\CoolScreenShot\DrawTools\bin\Release\DrawTools.dll
+D:\QBox\63293309\CoolScreenShot\DrawTools\bin\Release\DrawTools.pdb
+D:\QBox\63293309\CoolScreenShot\DrawTools\bin\Release\DocToolkit.dll
+D:\QBox\63293309\CoolScreenShot\DrawTools\bin\Release\DocToolkit.pdb
+D:\QBox\63293309\CoolScreenShot\DrawTools\obj\Release\ResolveAssemblyReference.cache
+D:\QBox\63293309\CoolScreenShot\DrawTools\obj\Release\DrawTools.DrawArea.resources
+D:\QBox\63293309\CoolScreenShot\DrawTools\obj\Release\DrawTools.PropertiesDialog.resources
+D:\QBox\63293309\CoolScreenShot\DrawTools\obj\Release\DrawTools.Properties.Resources.resources
+D:\QBox\63293309\CoolScreenShot\DrawTools\obj\Release\GenerateResource-ResGen.read.1.tlog
+D:\QBox\63293309\CoolScreenShot\DrawTools\obj\Release\GenerateResource-ResGen.write.1.tlog
+D:\QBox\63293309\CoolScreenShot\DrawTools\obj\Release\DrawTools.dll
+D:\QBox\63293309\CoolScreenShot\DrawTools\obj\Release\DrawTools.pdb
