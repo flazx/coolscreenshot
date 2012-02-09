@@ -224,7 +224,7 @@ namespace CoolScreenShot
             this.selectAllToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.selectAllToolStripMenuItem.Tag = "SelectAll";
             this.selectAllToolStripMenuItem.Text = "Select All";
-            this.selectAllToolStripMenuItem.Click += new System.EventHandler(this.toolClick);
+            this.selectAllToolStripMenuItem.Click += new System.EventHandler(this.ToolClick);
             // 
             // unselectAllToolStripMenuItem
             // 
@@ -232,7 +232,7 @@ namespace CoolScreenShot
             this.unselectAllToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.unselectAllToolStripMenuItem.Tag = "UnselectAll";
             this.unselectAllToolStripMenuItem.Text = "Unselect All";
-            this.unselectAllToolStripMenuItem.Click += new System.EventHandler(this.toolClick);
+            this.unselectAllToolStripMenuItem.Click += new System.EventHandler(this.ToolClick);
             // 
             // deleteToolStripMenuItem
             // 
@@ -240,7 +240,7 @@ namespace CoolScreenShot
             this.deleteToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.deleteToolStripMenuItem.Tag = "Delete";
             this.deleteToolStripMenuItem.Text = "Delete";
-            this.deleteToolStripMenuItem.Click += new System.EventHandler(this.toolClick);
+            this.deleteToolStripMenuItem.Click += new System.EventHandler(this.ToolClick);
             // 
             // deleteAllToolStripMenuItem
             // 
@@ -248,7 +248,7 @@ namespace CoolScreenShot
             this.deleteAllToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.deleteAllToolStripMenuItem.Tag = "DeleteAll";
             this.deleteAllToolStripMenuItem.Text = "Delete All";
-            this.deleteAllToolStripMenuItem.Click += new System.EventHandler(this.toolClick);
+            this.deleteAllToolStripMenuItem.Click += new System.EventHandler(this.ToolClick);
             // 
             // toolStripMenuItem3
             // 
@@ -261,7 +261,7 @@ namespace CoolScreenShot
             this.moveToFrontToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.moveToFrontToolStripMenuItem.Tag = "MoveToFront";
             this.moveToFrontToolStripMenuItem.Text = "Move to Front";
-            this.moveToFrontToolStripMenuItem.Click += new System.EventHandler(this.toolClick);
+            this.moveToFrontToolStripMenuItem.Click += new System.EventHandler(this.ToolClick);
             // 
             // moveToBackToolStripMenuItem
             // 
@@ -269,7 +269,7 @@ namespace CoolScreenShot
             this.moveToBackToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.moveToBackToolStripMenuItem.Tag = "MoveToBack";
             this.moveToBackToolStripMenuItem.Text = "Move to Back";
-            this.moveToBackToolStripMenuItem.Click += new System.EventHandler(this.toolClick);
+            this.moveToBackToolStripMenuItem.Click += new System.EventHandler(this.ToolClick);
             // 
             // toolStripMenuItem5
             // 
@@ -284,7 +284,7 @@ namespace CoolScreenShot
             this.undoToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.undoToolStripMenuItem.Tag = "Undo";
             this.undoToolStripMenuItem.Text = "Undo";
-            this.undoToolStripMenuItem.Click += new System.EventHandler(this.toolClick);
+            this.undoToolStripMenuItem.Click += new System.EventHandler(this.ToolClick);
             // 
             // redoToolStripMenuItem
             // 
@@ -294,7 +294,7 @@ namespace CoolScreenShot
             this.redoToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.redoToolStripMenuItem.Tag = "Redo";
             this.redoToolStripMenuItem.Text = "Redo";
-            this.redoToolStripMenuItem.Click += new System.EventHandler(this.toolClick);
+            this.redoToolStripMenuItem.Click += new System.EventHandler(this.ToolClick);
             // 
             // toolStripMenuItem4
             // 
@@ -307,7 +307,7 @@ namespace CoolScreenShot
             this.propertiesToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.propertiesToolStripMenuItem.Tag = "Preferences";
             this.propertiesToolStripMenuItem.Text = "Preferences";
-            this.propertiesToolStripMenuItem.Click += new System.EventHandler(this.toolClick);
+            this.propertiesToolStripMenuItem.Click += new System.EventHandler(this.ToolClick);
             // 
             // toolStripMenuItem6
             // 
@@ -315,7 +315,7 @@ namespace CoolScreenShot
             this.toolStripMenuItem6.Size = new System.Drawing.Size(159, 22);
             this.toolStripMenuItem6.Tag = "About";
             this.toolStripMenuItem6.Text = "About";
-            this.toolStripMenuItem6.Click += new System.EventHandler(this.toolClick);
+            this.toolStripMenuItem6.Click += new System.EventHandler(this.ToolClick);
             // 
             // drawToolStripMenuItem
             // 
@@ -629,7 +629,7 @@ namespace CoolScreenShot
             this.rectangle.Size = new System.Drawing.Size(24, 22);
             this.rectangle.Tag = "Rectangle";
             this.rectangle.Text = "Rectangle";
-            this.rectangle.Click += new System.EventHandler(this.toolClick);
+            this.rectangle.Click += new System.EventHandler(this.ToolClick);
             // 
             // toolStripButtonEllipse
             // 
@@ -640,7 +640,7 @@ namespace CoolScreenShot
             this.toolStripButtonEllipse.Size = new System.Drawing.Size(24, 22);
             this.toolStripButtonEllipse.Tag = "ellipse";
             this.toolStripButtonEllipse.Text = "Ellipse";
-            this.toolStripButtonEllipse.Click += new System.EventHandler(this.toolClick);
+            this.toolStripButtonEllipse.Click += new System.EventHandler(this.ToolClick);
             // 
             // toolStripButton1
             // 
@@ -651,7 +651,7 @@ namespace CoolScreenShot
             this.toolStripButton1.Size = new System.Drawing.Size(24, 22);
             this.toolStripButton1.Tag = "Arrow";
             this.toolStripButton1.Text = "Arrow";
-            this.toolStripButton1.Click += new System.EventHandler(this.toolClick);
+            this.toolStripButton1.Click += new System.EventHandler(this.ToolClick);
             // 
             // toolStripButtonLine
             // 
@@ -662,7 +662,7 @@ namespace CoolScreenShot
             this.toolStripButtonLine.Size = new System.Drawing.Size(24, 22);
             this.toolStripButtonLine.Tag = "line";
             this.toolStripButtonLine.Text = "Line";
-            this.toolStripButtonLine.Click += new System.EventHandler(this.toolClick);
+            this.toolStripButtonLine.Click += new System.EventHandler(this.ToolClick);
             // 
             // toolStripButton2
             // 
@@ -673,7 +673,7 @@ namespace CoolScreenShot
             this.toolStripButton2.Size = new System.Drawing.Size(24, 22);
             this.toolStripButton2.Tag = "pencil";
             this.toolStripButton2.Text = "Pencil";
-            this.toolStripButton2.Click += new System.EventHandler(this.toolClick);
+            this.toolStripButton2.Click += new System.EventHandler(this.ToolClick);
             // 
             // toolStripButtonNew
             // 
@@ -684,7 +684,7 @@ namespace CoolScreenShot
             this.toolStripButtonNew.Size = new System.Drawing.Size(24, 22);
             this.toolStripButtonNew.Tag = "text";
             this.toolStripButtonNew.Text = "text";
-            this.toolStripButtonNew.Click += new System.EventHandler(this.toolClick);
+            this.toolStripButtonNew.Click += new System.EventHandler(this.ToolClick);
             // 
             // toolStripSeparator1
             // 
@@ -700,7 +700,7 @@ namespace CoolScreenShot
             this.toolStripButtonUndo.Size = new System.Drawing.Size(24, 22);
             this.toolStripButtonUndo.Tag = "undo";
             this.toolStripButtonUndo.Text = "Undo";
-            this.toolStripButtonUndo.Click += new System.EventHandler(this.toolClick);
+            this.toolStripButtonUndo.Click += new System.EventHandler(this.ToolClick);
             // 
             // toolStripButtonPointer
             // 
@@ -711,7 +711,7 @@ namespace CoolScreenShot
             this.toolStripButtonPointer.Size = new System.Drawing.Size(24, 22);
             this.toolStripButtonPointer.Tag = "pointer";
             this.toolStripButtonPointer.Text = "Pointer";
-            this.toolStripButtonPointer.Click += new System.EventHandler(this.toolClick);
+            this.toolStripButtonPointer.Click += new System.EventHandler(this.ToolClick);
             // 
             // toolStripButtonSave
             // 
@@ -722,7 +722,7 @@ namespace CoolScreenShot
             this.toolStripButtonSave.Size = new System.Drawing.Size(24, 22);
             this.toolStripButtonSave.Tag = "save";
             this.toolStripButtonSave.Text = "Save";
-            this.toolStripButtonSave.Click += new System.EventHandler(this.toolClick);
+            this.toolStripButtonSave.Click += new System.EventHandler(this.ToolClick);
             // 
             // toolStripSeparator4
             // 
@@ -738,7 +738,7 @@ namespace CoolScreenShot
             this.toolStripButton3.Size = new System.Drawing.Size(24, 22);
             this.toolStripButton3.Tag = "exit";
             this.toolStripButton3.Text = "exit";
-            this.toolStripButton3.Click += new System.EventHandler(this.toolClick);
+            this.toolStripButton3.Click += new System.EventHandler(this.ToolClick);
             // 
             // toolStripButton17
             // 
@@ -751,7 +751,7 @@ namespace CoolScreenShot
             this.toolStripButton17.Size = new System.Drawing.Size(24, 22);
             this.toolStripButton17.Tag = "complete";
             this.toolStripButton17.Text = "complete";
-            this.toolStripButton17.Click += new System.EventHandler(this.toolClick);
+            this.toolStripButton17.Click += new System.EventHandler(this.ToolClick);
             // 
             // drawArea
             // 

@@ -20,6 +20,7 @@ namespace CoolScreenShot
 
                 applicationContext = new CoolShotApplicationContext();
                 Application.Run(applicationContext);
+
                 mutex.ReleaseMutex();
             }
             else {

@@ -61,3 +61,4 @@ D:\QBox\63293309\CoolScreenShot\CoolScreenShot\obj\x86\Debug\GenerateResource-Re
 D:\QBox\63293309\CoolScreenShot\CoolScreenShot\obj\x86\Debug\GenerateResource-ResGen.write.1.tlog
 D:\QBox\63293309\CoolScreenShot\CoolScreenShot\obj\x86\Debug\CoolScreenShot.SettingForm.resources
 E:\apps\github\CoolScreenShot\CoolScreenShot\obj\x86\Debug\CoolScreenShot.SettingForm.resources
+E:\apps\github\CoolScreenShot\CoolScreenShot\bin\Debug\coolshot.ini

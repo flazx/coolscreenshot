@@ -15,7 +15,25 @@
     {
         "Entry"
         {
-        "MsmKey" = "8:_8836830D75768A838B4C21805C17DBDF"
+        "MsmKey" = "8:_334CA6B2375A4ED0AA80561D31B7DFB1"
+        "OwnerKey" = "8:_UNDEFINED"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_4A28DB06B9E94C59D3A42F5AFB10E4FC"
+        "OwnerKey" = "8:_E81D23202BD04F08BD32780EF551AF1B"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_4A28DB06B9E94C59D3A42F5AFB10E4FC"
+        "OwnerKey" = "8:_86D1E160BF37A21A2891C5FFC7F04D82"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_86D1E160BF37A21A2891C5FFC7F04D82"
         "OwnerKey" = "8:_E81D23202BD04F08BD32780EF551AF1B"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -27,24 +45,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_FDCEBE24976B817650CCE64B269E4101"
-        "OwnerKey" = "8:_E81D23202BD04F08BD32780EF551AF1B"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_FDCEBE24976B817650CCE64B269E4101"
-        "OwnerKey" = "8:_8836830D75768A838B4C21805C17DBDF"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_FDCEBE24976B817650CCE64B269E4101"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_E81D23202BD04F08BD32780EF551AF1B"
         "MsmSig" = "8:_UNDEFINED"
@@ -52,7 +52,13 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_8836830D75768A838B4C21805C17DBDF"
+        "OwnerKey" = "8:_86D1E160BF37A21A2891C5FFC7F04D82"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_4A28DB06B9E94C59D3A42F5AFB10E4FC"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -73,6 +79,14 @@
         "PrivateKeyFile" = "8:"
         "TimeStampServer" = "8:"
         "InstallerBootstrapper" = "3:2"
+            "BootstrapperCfg:{63ACBE69-63AA-4F98-B2B6-99F9E24495F2}"
+            {
+            "Enabled" = "11:TRUE"
+            "PromptEnabled" = "11:TRUE"
+            "PrerequisitesLocation" = "2:1"
+            "Url" = "8:"
+            "ComponentsUrl" = "8:"
+            }
         }
         "Release"
         {
@@ -139,20 +153,40 @@
         }
         "File"
         {
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_8836830D75768A838B4C21805C17DBDF"
+            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_334CA6B2375A4ED0AA80561D31B7DFB1"
+            {
+            "SourcePath" = "8:..\\CoolScreenShot\\coolshot.ini"
+            "TargetName" = "8:coolshot.ini"
+            "Tag" = "8:"
+            "Folder" = "8:_78FD921E30114656BAB2B6043053206B"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:FALSE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_4A28DB06B9E94C59D3A42F5AFB10E4FC"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:DrawTools, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:DocToolkit, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_8836830D75768A838B4C21805C17DBDF"
+                    "_4A28DB06B9E94C59D3A42F5AFB10E4FC"
                     {
-                    "Name" = "8:DrawTools.dll"
+                    "Name" = "8:DocToolkit.dll"
                     "Attributes" = "3:512"
                     }
                 }
-            "SourcePath" = "8:DrawTools.dll"
+            "SourcePath" = "8:DocToolkit.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_78FD921E30114656BAB2B6043053206B"
@@ -170,20 +204,20 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_FDCEBE24976B817650CCE64B269E4101"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_86D1E160BF37A21A2891C5FFC7F04D82"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:DocToolkit, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:DrawTools, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_FDCEBE24976B817650CCE64B269E4101"
+                    "_86D1E160BF37A21A2891C5FFC7F04D82"
                     {
-                    "Name" = "8:DocToolkit.dll"
+                    "Name" = "8:DrawTools.dll"
                     "Attributes" = "3:512"
                     }
                 }
-            "SourcePath" = "8:DocToolkit.dll"
+            "SourcePath" = "8:DrawTools.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_78FD921E30114656BAB2B6043053206B"
@@ -258,7 +292,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:CoolShot"
         "ProductCode" = "8:{51858770-144B-4C0B-96AA-619E27609AA4}"
-        "PackageCode" = "8:{F947780A-B2F4-4536-9241-639238228DCF}"
+        "PackageCode" = "8:{850E8760-8827-4605-881E-E9F60A7F31D0}"
         "UpgradeCode" = "8:{CAC5A564-A115-4B86-A29C-D3F7E096EF13}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"

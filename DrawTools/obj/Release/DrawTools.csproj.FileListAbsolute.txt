@@ -23,3 +23,4 @@ D:\QBox\63293309\CoolScreenShot\DrawTools\obj\Release\GenerateResource-ResGen.wr
 D:\QBox\63293309\CoolScreenShot\DrawTools\obj\Release\DrawTools.dll
 D:\QBox\63293309\CoolScreenShot\DrawTools\obj\Release\DrawTools.pdb
 D:\QBox\63293309\CoolScreenShot\DrawTools\bin\Release\DrawTools.dll.config
+E:\apps\github\CoolScreenShot\DrawTools\bin\Release\DrawTools.dll.config

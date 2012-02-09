@@ -102,6 +102,7 @@
     </Compile>
     <Compile Include="GraphicsList.cs" />
     <Compile Include="IDrawAreaOwner.cs" />
+    <Compile Include="IniFile.cs" />
     <Compile Include="LayeredForm.cs">
       <SubType>Form</SubType>
     </Compile>

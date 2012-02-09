@@ -29,6 +29,7 @@ namespace CoolScreenShot
         Point firstStartPoint = Point.Empty;
         Point firstEndPoint = Point.Empty;
         bool isDrawRectAreaCreated = false;
+        bool isExportingGraphic = false;
 
         int resizedObjectHandle;
         SelectionMode selectMode = SelectionMode.None;
@@ -85,7 +86,7 @@ namespace CoolScreenShot
 
         #region tools event
 
-        private void toolClick(object sender, EventArgs e)
+        private void ToolClick(object sender, EventArgs e)
         {
             string command = "";
             ToolStripButton btn = sender as ToolStripButton;
@@ -427,7 +428,6 @@ namespace CoolScreenShot
             this.drawArea.Location = new Point(left, top);
             this.drawArea.Width = Math.Abs(r.Width);
             this.drawArea.Height = Math.Abs(r.Height);
-            this.drawArea.Visible = true;
         }
 
         protected override void OnPaint(PaintEventArgs e)
@@ -446,7 +446,7 @@ namespace CoolScreenShot
 
             DrawBG(g);
 
-            if (HasDrawRectangleArea)
+            if (!isExportingGraphic && HasDrawRectangleArea)
             {
                 DrawCropArea(g);
                 UpdateToolsPanelColorPickerLocation();
@@ -614,10 +614,16 @@ namespace CoolScreenShot
 
             g = this.CreateGraphics();
 
-            /*
             FormBorderStyle = FormBorderStyle.None;
             WindowState = FormWindowState.Maximized;
-            TopMost = true;*/
+            TopMost = true;
+
+            #if DEBUG
+                
+            #endif
+
+
+
 
             this.SetStyle(
                 ControlStyles.AllPaintingInWmPaint |
@@ -650,8 +656,16 @@ namespace CoolScreenShot
         #region helper methods
         private Bitmap GetCurrentCropAnnotateImage()
         {
+            this.isExportingGraphic = true;
+            this.Refresh();
+
+            this.drawArea.GraphicsList.UnselectAll();
+
             Bitmap bmp = new System.Drawing.Bitmap(drawArea.ClientRectangle.Width, drawArea.ClientRectangle.Height);
             drawArea.DrawToBitmap(bmp, drawArea.ClientRectangle);
+
+            this.isExportingGraphic = false;
+            this.Refresh();
 
 
             return bmp;

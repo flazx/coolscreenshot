@@ -5,13 +5,6 @@ using MovablePython;
 
 namespace CoolScreenShot
 {
-	/// <summary>
-	/// CalendarApplicationContext.
-	/// This class has several jobs:
-	///		- Create the NotifyIcon UI
-	///		- Manage the CalendarForm that pops up
-	///		- Determines when the Application should exit
-	/// </summary>
 	public class CoolShotApplicationContext : ApplicationContext 
 	{
 		private System.ComponentModel.IContainer	components;						// a list of components to dispose when the context is disposed
@@ -52,10 +45,14 @@ namespace CoolScreenShot
 			// calendarNotifyIcon
 			// 
 			this.notifyIcon.ContextMenu = this.notifyIconContextMenu;
-			this.notifyIcon.DoubleClick += new System.EventHandler(this.calendarNotifyIcon_DoubleClick);
+            this.notifyIcon.DoubleClick += new System.EventHandler(this.notifyIcon_DoubleClick);
             this.notifyIcon.Icon = CoolScreenShot.Properties.Resources.SystemIcon;
-			this.notifyIcon.Text = DateTime.Now.ToLongDateString();
-			this.notifyIcon.Visible = true;
+
+            this.ShowBalloonTip();
+
+            this.notifyIcon.Visible = true;
+            this.notifyIcon.ShowBalloonTip(3000);
+            
 			// 
 			// calendarNotifyIconContextMenu
 			// 
@@ -65,7 +62,7 @@ namespace CoolScreenShot
 			// showContextMenuItem
 			// 
 			this.showContextMenuItem.Index = 0;
-			this.showContextMenuItem.Text = "&Start Screen Shot (Ctrl+Win+A)";
+            this.showContextMenuItem.Text = String.Format("&Start Shot ({0})", Config.GetCurrentHotkeys());
 			this.showContextMenuItem.DefaultItem = true;
 			this.showContextMenuItem.Click += new System.EventHandler(this.showContextMenuItem_Click);
 
@@ -83,16 +80,31 @@ namespace CoolScreenShot
 			this.exitContextMenuItem.Index = 2;
 			this.exitContextMenuItem.Text = "&Exit";
 			this.exitContextMenuItem.Click += new System.EventHandler(this.exitContextMenuItem_Click);
-			
-			this.registerHotkeyForm = new ProxyForm();
+
+            this.registerHotkeyForm = ProxyForm.Instance;
+            this.registerHotkeyForm.AppContext = this;
 			this.registerHotkeyForm.RegisterAppHotKey();
 		}
 
+        private void notifyIcon_DoubleClick(object sender, System.EventArgs e)
+        {
+            ShowForm();
+        }
+
+        void notifyIcon_MouseMove(object sender, MouseEventArgs e)
+        {
+            
+        }
+
         void preferencesMenuItem_Click(object sender, EventArgs e)
         {
-            if (this.sf == null)
-                this.sf = new SettingForm();
+            if (this.sf != null)
+            {
+                this.sf.Dispose();
+                this.sf = null;
+            }
 
+            this.sf = new SettingForm();
             this.sf.Show();
         }
 
@@ -131,16 +143,6 @@ namespace CoolScreenShot
 		{
 			ExitThread();
 		}
-		
-		/// <summary>
-		/// When the notify icon is double clicked in the system tray, bring up a form with a calendar on it.
-		/// </summary>
-		/// <param name="sender"></param>
-		/// <param name="e"></param>
-		private void calendarNotifyIcon_DoubleClick(object sender,System.EventArgs e)
-		{
-			ShowForm();
-		}
 
 		/// <summary>
 		/// This function will either create a new CalendarForm or activate the existing one, bringing the 
@@ -150,6 +152,12 @@ namespace CoolScreenShot
 		{
 			registerHotkeyForm.ShowMainForm();
 		}
+
+        public void ShowBalloonTip() {
+            this.notifyIcon.Text = String.Format("CoolShot (press {0} to crop)", Config.GetCurrentHotkeys());
+            this.notifyIcon.BalloonTipIcon = ToolTipIcon.Info;
+            this.notifyIcon.BalloonTipText = String.Format("Cool Shot\nStart crop: {0}", Config.GetCurrentHotkeys());
+        }
 
 
 		private void mainForm_Closed (object sender, EventArgs e) 
