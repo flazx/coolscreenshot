@@ -119,7 +119,7 @@ namespace CoolScreenShot
             else
                 UtilHelps.RemoveWhenStart();
 
-            DrawTools.DrawSettings.Quality = this.trackBar1.Value;
+            //DrawTools.DrawSettings.Quality = this.trackBar1.Value;
             DrawTools.DrawSettings.LastUsedColor = (Color)this.colorComboBox.SelectedItem;
             DrawTools.DrawSettings.LastUsedPenWidth = (int)this.penWidthComboBox.SelectedItem;
             DrawTools.DrawSettings.LastUsedTextSize = (int)this.textsizeComboBox.SelectedItem;
@@ -140,7 +140,7 @@ namespace CoolScreenShot
 
         private void trackBar1_ValueChanged(object sender, EventArgs e)
         {
-            this.textBox1.Text = this.trackBar1.Value.ToString();
+            //this.textBox1.Text = this.trackBar1.Value.ToString();
         }
 
         private void colorComboBox_DrawItem(object sender, DrawItemEventArgs e)
