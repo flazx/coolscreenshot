@@ -11,8 +11,7 @@
     <TargetFrameworkProfile>
     </TargetFrameworkProfile>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <ApplicationIcon>
-    </ApplicationIcon>
+    <ApplicationIcon>icon16x16.ico</ApplicationIcon>
     <IsWebBootstrapper>false</IsWebBootstrapper>
     <PublishUrl>publish\</PublishUrl>
     <Install>true</Install>
@@ -91,6 +90,12 @@
     <Compile Include="MainForm.Designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="SettingForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SettingForm.Designer.cs">
+      <DependentUpon>SettingForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\ColorItemButton.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -100,6 +105,7 @@
     <Compile Include="UserControls\MyColorPicker.Designer.cs">
       <DependentUpon>MyColorPicker.cs</DependentUpon>
     </Compile>
+    <Compile Include="UtilHelps.cs" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
@@ -135,6 +141,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="SettingForm.resx">
+      <DependentUpon>SettingForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\MyColorPicker.resx">
       <DependentUpon>MyColorPicker.cs</DependentUpon>
     </EmbeddedResource>
@@ -148,9 +157,6 @@
       <Project>{56C76B98-1CE1-4156-885E-EC04150747DF}</Project>
       <Name>DrawTools</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="app.config" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\1.jpg" />

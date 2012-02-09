@@ -18,14 +18,16 @@ namespace DrawTools
         private bool selected;
         private Color color;
         private int penWidth;
+        private int textSize;
 
         // Allows to write Undo - Redo functions and don't care about
         // objects order in the list.
         int id;   
 
         // Last used property values (may be kept in the Registry)
-        private static Color lastUsedColor = Color.Red;
-        private static int lastUsedPenWidth = 1;
+        //private static Color lastUsedColor = Color.Red;
+        //private static int lastUsedPenWidth = 1;
+       
 
         // Entry names for serialization
         private const string entryColor = "Color";
@@ -37,8 +39,6 @@ namespace DrawTools
         {
             id = this.GetHashCode();
         }
-
-        #region Properties
 
         /// <summary>
         /// Selection flag
@@ -85,6 +85,17 @@ namespace DrawTools
             }
         }
 
+        public int TextSize {
+            get
+            {
+                return textSize;
+            }
+            set
+            {
+                textSize = value;
+            }
+        }
+
         /// <summary>
         /// Number of handles
         /// </summary>
@@ -104,39 +115,6 @@ namespace DrawTools
             get { return id; }
             set { id = value; }
         }
-
-
-        /// <summary>
-        /// Last used color
-        /// </summary>
-        public static Color LastUsedColor
-        {
-            get
-            {
-                return lastUsedColor;
-            }
-            set
-            {
-                lastUsedColor = value;
-            }
-        }
-
-        /// <summary>
-        /// Last used pen width
-        /// </summary>
-        public static int LastUsedPenWidth
-        {
-            get
-            {
-                return lastUsedPenWidth;
-            }
-            set
-            {
-                lastUsedPenWidth = value;
-            }
-        }
-
-        #endregion
 
         #region Virtual Functions
 
@@ -328,8 +306,9 @@ namespace DrawTools
         /// </summary>
         protected void Initialize()
         {
-            color = lastUsedColor;
-            penWidth = LastUsedPenWidth;
+            color = DrawSettings.LastUsedColor;
+            penWidth = DrawSettings.LastUsedPenWidth;
+            textSize = DrawSettings.LastUsedTextSize;
         }
 
         /// <summary>

@@ -2,6 +2,7 @@ using System;
 using System.Windows.Forms;
 using System.Drawing;
 using MovablePython;
+
 namespace CoolScreenShot
 {
 	/// <summary>
@@ -17,16 +18,22 @@ namespace CoolScreenShot
 		private System.Windows.Forms.NotifyIcon		notifyIcon;				// the icon that sits in the system tray
 		private System.Windows.Forms.ContextMenu	notifyIconContextMenu;	// the context menu for the notify icon
 		private System.Windows.Forms.MenuItem		exitContextMenuItem;			// exit menu command for context menu 
-		private System.Windows.Forms.MenuItem		showContextMenuItem;			// open menu command for context menu 	
+        private System.Windows.Forms.MenuItem       preferencesMenuItem;
+        private System.Windows.Forms.MenuItem		showContextMenuItem;			// open menu command for context menu 	
 		private ProxyForm registerHotkeyForm;				// the current form we're displaying
+        private Form sf;
 		
 		/// <summary>
 		/// This class should be created and passed into Application.Run( ... )
 		/// </summary>
 		public CoolShotApplicationContext() 
 		{
-			// create the notify icon and it's associated context menu
 			InitializeContext();
+
+            if (UtilHelps.IsFirstRunApp())
+            {
+                UtilHelps.AddWhenStart();
+            }
 		}
 
 		/// <summary>
@@ -37,7 +44,8 @@ namespace CoolScreenShot
 			this.components = new System.ComponentModel.Container();
 			this.notifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
 			this.notifyIconContextMenu = new System.Windows.Forms.ContextMenu();
-			this.showContextMenuItem = new System.Windows.Forms.MenuItem();		
+			this.showContextMenuItem = new System.Windows.Forms.MenuItem();
+            this.preferencesMenuItem = new System.Windows.Forms.MenuItem();	
 			this.exitContextMenuItem = new System.Windows.Forms.MenuItem();
 		
 			// 
@@ -51,7 +59,7 @@ namespace CoolScreenShot
 			// 
 			// calendarNotifyIconContextMenu
 			// 
-			this.notifyIconContextMenu.MenuItems.AddRange(new MenuItem[] { showContextMenuItem, exitContextMenuItem });
+			this.notifyIconContextMenu.MenuItems.AddRange(new MenuItem[] { showContextMenuItem,preferencesMenuItem,exitContextMenuItem });
 
 			// 
 			// showContextMenuItem
@@ -61,16 +69,32 @@ namespace CoolScreenShot
 			this.showContextMenuItem.DefaultItem = true;
 			this.showContextMenuItem.Click += new System.EventHandler(this.showContextMenuItem_Click);
 
+
+            // 
+            // showContextMenuItem
+            // 
+            this.preferencesMenuItem.Index = 1;
+            this.preferencesMenuItem.Text = "&Preferences";
+            this.preferencesMenuItem.Click += new EventHandler(preferencesMenuItem_Click);
+
 			// 
 			// exitContextMenuItem
 			// 
-			this.exitContextMenuItem.Index = 1;
+			this.exitContextMenuItem.Index = 2;
 			this.exitContextMenuItem.Text = "&Exit";
 			this.exitContextMenuItem.Click += new System.EventHandler(this.exitContextMenuItem_Click);
 			
 			this.registerHotkeyForm = new ProxyForm();
 			this.registerHotkeyForm.RegisterAppHotKey();
 		}
+
+        void preferencesMenuItem_Click(object sender, EventArgs e)
+        {
+            if (this.sf == null)
+                this.sf = new SettingForm();
+
+            this.sf.Show();
+        }
 
 
 		/// <summary>
@@ -116,27 +140,13 @@ namespace CoolScreenShot
 		private void calendarNotifyIcon_DoubleClick(object sender,System.EventArgs e)
 		{
 			ShowForm();
-			/*
-			if (this.mainForm != null) {
-				this.mainForm.Dispose();
-			}
-			
-			// create a fresh new CalendarForm and show it.
-			mainForm = new MainForm();
-			mainForm.Show();
-			mainForm.Activate();
-			
-			// hook onto the closed event so we can null out the main form...  this avoids reshowing
-			// a disposed form.
-			mainForm.Closed +=new EventHandler(mainForm_Closed);
-			*/
 		}
 
 		/// <summary>
 		/// This function will either create a new CalendarForm or activate the existing one, bringing the 
 		/// window to front.
 		/// </summary>
-		private void ShowForm() 
+		public void ShowForm() 
 		{
 			registerHotkeyForm.ShowMainForm();
 		}

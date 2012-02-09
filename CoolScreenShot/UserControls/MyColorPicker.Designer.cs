@@ -43,7 +43,11 @@ namespace CoolScreenShot.UserControls
             this.btn1 = new System.Windows.Forms.Button();
             this.btn2 = new System.Windows.Forms.Button();
             this.btn3 = new System.Windows.Forms.Button();
+            this.textPanel = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textSizeComboBox = new System.Windows.Forms.ComboBox();
             this.panel1.SuspendLayout();
+            this.textPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
@@ -120,10 +124,39 @@ namespace CoolScreenShot.UserControls
             this.btn3.MouseLeave += new System.EventHandler(this.MouseLeave);
             this.btn3.MouseHover += new System.EventHandler(this.MouseHover);
             // 
+            // textPanel
+            // 
+            this.textPanel.Controls.Add(this.label1);
+            this.textPanel.Controls.Add(this.textSizeComboBox);
+            this.textPanel.Location = new System.Drawing.Point(2, 4);
+            this.textPanel.Name = "textPanel";
+            this.textPanel.Size = new System.Drawing.Size(84, 30);
+            this.textPanel.TabIndex = 5;
+            // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Arial Narrow", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label1.Location = new System.Drawing.Point(8, 1);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(19, 23);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "T";
+            // 
+            // textSizeComboBox
+            // 
+            this.textSizeComboBox.FormattingEnabled = true;
+            this.textSizeComboBox.Location = new System.Drawing.Point(32, 5);
+            this.textSizeComboBox.Name = "textSizeComboBox";
+            this.textSizeComboBox.Size = new System.Drawing.Size(44, 20);
+            this.textSizeComboBox.TabIndex = 0;
+            this.textSizeComboBox.SelectedIndexChanged += new System.EventHandler(this.textSizeComboBox_SelectedIndexChanged);
+            // 
             // MyColorPicker
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.textPanel);
             this.Controls.Add(this.btn3);
             this.Controls.Add(this.btn2);
             this.Controls.Add(this.btn1);
@@ -133,6 +166,7 @@ namespace CoolScreenShot.UserControls
             this.Size = new System.Drawing.Size(264, 39);
             this.Load += new System.EventHandler(this.MyColorPickerLoad);
             this.panel1.ResumeLayout(false);
+            this.textPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
 		}
@@ -142,5 +176,8 @@ namespace CoolScreenShot.UserControls
 		private System.Windows.Forms.Button bigColorButton;
 		private System.Windows.Forms.Panel panel1;
 		private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Panel textPanel;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox textSizeComboBox;
 	}
 }

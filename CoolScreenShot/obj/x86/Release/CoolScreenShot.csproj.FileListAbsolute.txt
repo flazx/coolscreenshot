@@ -12,7 +12,6 @@ E:\apps\github\CoolScreenShot\CoolScreenShot\obj\x86\Release\CoolScreenShot.exe
 E:\apps\github\CoolScreenShot\CoolScreenShot\bin\Release\CoolScreenShot.exe.config
 E:\apps\github\CoolScreenShot\CoolScreenShot\obj\x86\Release\GenerateResource-ResGen.read.1.tlog
 E:\apps\github\CoolScreenShot\CoolScreenShot\obj\x86\Release\GenerateResource-ResGen.write.1.tlog
-D:\QBox\63293309\CoolScreenShot\CoolScreenShot\bin\Release\CoolScreenShot.exe.config
 D:\QBox\63293309\CoolScreenShot\CoolScreenShot\obj\x86\Release\CoolScreenShot.exe
 D:\QBox\63293309\CoolScreenShot\CoolScreenShot\bin\Release\CoolScreenShot.exe
 D:\QBox\63293309\CoolScreenShot\CoolScreenShot\bin\Release\DocToolkit.dll
@@ -26,3 +25,4 @@ D:\QBox\63293309\CoolScreenShot\CoolScreenShot\obj\x86\Release\CoolScreenShot.Pr
 D:\QBox\63293309\CoolScreenShot\CoolScreenShot\obj\x86\Release\CoolScreenShot.UserControls.MyColorPicker.resources
 D:\QBox\63293309\CoolScreenShot\CoolScreenShot\obj\x86\Release\GenerateResource-ResGen.read.1.tlog
 D:\QBox\63293309\CoolScreenShot\CoolScreenShot\obj\x86\Release\GenerateResource-ResGen.write.1.tlog
+D:\QBox\63293309\CoolScreenShot\CoolScreenShot\obj\x86\Release\CoolScreenShot.SettingForm.resources

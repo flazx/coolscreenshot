@@ -60,6 +60,7 @@ namespace CoolScreenShot
             this.redoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripSeparator();
             this.propertiesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem6 = new System.Windows.Forms.ToolStripMenuItem();
             this.drawToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pointerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rectangleToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -104,7 +105,6 @@ namespace CoolScreenShot
             this.toolStripButton17 = new System.Windows.Forms.ToolStripButton();
             this.drawArea = new DrawTools.DrawArea();
             this.myColorPicker = new CoolScreenShot.UserControls.MyColorPicker();
-            this.toolStripMenuItem6 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.toolStrip2.SuspendLayout();
             this.toolStripPanel.SuspendLayout();
@@ -305,9 +305,17 @@ namespace CoolScreenShot
             // 
             this.propertiesToolStripMenuItem.Name = "propertiesToolStripMenuItem";
             this.propertiesToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
-            this.propertiesToolStripMenuItem.Tag = "Properties";
-            this.propertiesToolStripMenuItem.Text = "Properties";
+            this.propertiesToolStripMenuItem.Tag = "Preferences";
+            this.propertiesToolStripMenuItem.Text = "Preferences";
             this.propertiesToolStripMenuItem.Click += new System.EventHandler(this.toolClick);
+            // 
+            // toolStripMenuItem6
+            // 
+            this.toolStripMenuItem6.Name = "toolStripMenuItem6";
+            this.toolStripMenuItem6.Size = new System.Drawing.Size(159, 22);
+            this.toolStripMenuItem6.Tag = "About";
+            this.toolStripMenuItem6.Text = "About";
+            this.toolStripMenuItem6.Click += new System.EventHandler(this.toolClick);
             // 
             // drawToolStripMenuItem
             // 
@@ -766,17 +774,10 @@ namespace CoolScreenShot
             this.myColorPicker.Name = "myColorPicker";
             this.myColorPicker.PenWidth = 1;
             this.myColorPicker.SelectedColor = System.Drawing.Color.Red;
+            this.myColorPicker.SelectedTextSize = 8;
             this.myColorPicker.Size = new System.Drawing.Size(264, 39);
             this.myColorPicker.TabIndex = 6;
             this.myColorPicker.Visible = false;
-            // 
-            // toolStripMenuItem6
-            // 
-            this.toolStripMenuItem6.Name = "toolStripMenuItem6";
-            this.toolStripMenuItem6.Size = new System.Drawing.Size(159, 22);
-            this.toolStripMenuItem6.Tag = "About";
-            this.toolStripMenuItem6.Text = "About";
-            this.toolStripMenuItem6.Click += new System.EventHandler(this.toolClick);
             // 
             // MainForm
             // 

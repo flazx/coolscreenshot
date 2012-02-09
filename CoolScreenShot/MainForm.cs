@@ -62,11 +62,9 @@ namespace CoolScreenShot
             drawArea.Initialize(this, docManager);
 
             GraphicsProperties graphicProperties = drawArea.GraphicsList.GetProperties();
-            this.myColorPicker.SelectedColor = DrawObject.LastUsedColor;
+            this.myColorPicker.SelectedColor = DrawSettings.LastUsedColor;
             this.myColorPicker.PenWidth = graphicProperties.PenWidth;
-            this.drawArea.ToolTextBox.ForeColor = DrawObject.LastUsedColor;
-
-            
+            this.drawArea.ToolTextBox.ForeColor = DrawSettings.LastUsedColor;
 
             this.myColorPicker.PropertyChanged += delegate(object sender, PropertyChangedEventArgs e)
             {
@@ -74,6 +72,7 @@ namespace CoolScreenShot
                 p.Color = e.Color;
                 p.PenWidth = e.Width;
                 this.drawArea.ToolTextBox.ForeColor = e.Color.Value;
+                this.drawArea.ToolTextBox.Font = new System.Drawing.Font("Arial Narrow", e.TextSize);
 
                 if (drawArea.GraphicsList.ShowColorPickerPanel(drawArea, p))
                 {
@@ -142,6 +141,8 @@ namespace CoolScreenShot
             {
                 this.drawArea.ToolTextBox.Visible = false;
             }
+
+            this.myColorPicker.SwitchMode(command == "text");
 
             switch (command)
             {
@@ -241,6 +242,10 @@ namespace CoolScreenShot
                     break;
                 case "exit":
                     this.Exit();
+                    break;
+                case "preferences":
+                    Form sf = new SettingForm();
+                    sf.Show();
                     break;
             }
         }
@@ -422,6 +427,7 @@ namespace CoolScreenShot
             this.drawArea.Location = new Point(left, top);
             this.drawArea.Width = Math.Abs(r.Width);
             this.drawArea.Height = Math.Abs(r.Height);
+            this.drawArea.Visible = true;
         }
 
         protected override void OnPaint(PaintEventArgs e)
@@ -608,9 +614,10 @@ namespace CoolScreenShot
 
             g = this.CreateGraphics();
 
+            /*
             FormBorderStyle = FormBorderStyle.None;
             WindowState = FormWindowState.Maximized;
-            TopMost = true;
+            TopMost = true;*/
 
             this.SetStyle(
                 ControlStyles.AllPaintingInWmPaint |
@@ -645,6 +652,7 @@ namespace CoolScreenShot
         {
             Bitmap bmp = new System.Drawing.Bitmap(drawArea.ClientRectangle.Width, drawArea.ClientRectangle.Height);
             drawArea.DrawToBitmap(bmp, drawArea.ClientRectangle);
+
 
             return bmp;
         }

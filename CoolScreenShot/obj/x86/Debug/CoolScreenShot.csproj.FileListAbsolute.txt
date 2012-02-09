@@ -25,7 +25,6 @@ E:\apps\github\CoolScreenShot\CoolScreenShot\obj\x86\Debug\CoolScreenShot.MainFo
 E:\apps\github\CoolScreenShot\CoolScreenShot\obj\x86\Debug\CoolScreenShot.UserControls.MyColorPicker.resources
 E:\apps\github\CoolScreenShot\CoolScreenShot\obj\x86\Debug\CoolScreenShot.exe
 E:\apps\github\CoolScreenShot\CoolScreenShot\obj\x86\Debug\CoolScreenShot.pdb
-E:\apps\github\CoolScreenShot\CoolScreenShot\bin\Debug\CoolScreenShot.exe.config
 E:\apps\github\CoolScreenShot\CoolScreenShot\obj\x86\Debug\CoolScreenShot.Properties.Resources.resources
 E:\apps\github\CoolScreenShot\CoolScreenShot\obj\x86\Debug\GenerateResource-ResGen.read.1.tlog
 E:\apps\github\CoolScreenShot\CoolScreenShot\obj\x86\Debug\GenerateResource-ResGen.write.1.tlog
@@ -45,7 +44,6 @@ F:\QBox\63293309\CoolScreenShot\CoolScreenShot\obj\x86\Debug\CoolScreenShot.Prop
 F:\QBox\63293309\CoolScreenShot\CoolScreenShot\obj\x86\Debug\CoolScreenShot.UserControls.MyColorPicker.resources
 F:\QBox\63293309\CoolScreenShot\CoolScreenShot\obj\x86\Debug\GenerateResource-ResGen.read.1.tlog
 F:\QBox\63293309\CoolScreenShot\CoolScreenShot\obj\x86\Debug\GenerateResource-ResGen.write.1.tlog
-D:\QBox\63293309\CoolScreenShot\CoolScreenShot\bin\Debug\CoolScreenShot.exe.config
 D:\QBox\63293309\CoolScreenShot\CoolScreenShot\obj\x86\Debug\CoolScreenShot.exe
 D:\QBox\63293309\CoolScreenShot\CoolScreenShot\obj\x86\Debug\CoolScreenShot.pdb
 D:\QBox\63293309\CoolScreenShot\CoolScreenShot\bin\Debug\CoolScreenShot.exe
@@ -61,3 +59,5 @@ D:\QBox\63293309\CoolScreenShot\CoolScreenShot\obj\x86\Debug\CoolScreenShot.Prop
 D:\QBox\63293309\CoolScreenShot\CoolScreenShot\obj\x86\Debug\CoolScreenShot.UserControls.MyColorPicker.resources
 D:\QBox\63293309\CoolScreenShot\CoolScreenShot\obj\x86\Debug\GenerateResource-ResGen.read.1.tlog
 D:\QBox\63293309\CoolScreenShot\CoolScreenShot\obj\x86\Debug\GenerateResource-ResGen.write.1.tlog
+D:\QBox\63293309\CoolScreenShot\CoolScreenShot\obj\x86\Debug\CoolScreenShot.SettingForm.resources
+E:\apps\github\CoolScreenShot\CoolScreenShot\obj\x86\Debug\CoolScreenShot.SettingForm.resources

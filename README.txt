@@ -6,6 +6,8 @@ Included open-source libraries:
  MovablePython.Hotkey http://bloggablea.wordpress.com/2007/05/01/global-hotkeys-with-net/
 
 
+
+
 1/25/2012 v0.1
 ----------------
 Ctrl+Win+A start screen crop

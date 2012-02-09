@@ -76,7 +76,7 @@ namespace DrawTools
         {
             Brush brush = new SolidBrush(Color);
 
-            g.DrawString(this.text, new Font("Arial", 8),brush, this.area);
+            g.DrawString(this.text, new Font("Arial", TextSize), brush, this.area);
 
             brush.Dispose();
         }

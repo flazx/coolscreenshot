@@ -10,6 +10,7 @@ using System;
 using System.ComponentModel;
 using System.Drawing;
 using System.Windows.Forms;
+using DrawTools;
 
 namespace CoolScreenShot.UserControls
 {
@@ -20,24 +21,32 @@ namespace CoolScreenShot.UserControls
 	{
 		public delegate void PropertyValueChangeHandler(object sender, PropertyChangedEventArgs e);
 		public event PropertyValueChangeHandler PropertyChanged;
-		public Color? selectedColor = Color.Red;
-		public int? selectedWidth = 1;
+        public Color? selectedColor = DrawSettings.LastUsedColor;
+        public int? selectedWidth = DrawSettings.LastUsedPenWidth;
+        public int selectedTextSize = DrawSettings.LastUsedTextSize;
+
+
 		System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MyColorPicker));
 		
 		public MyColorPicker()
 		{
-			//
-			// The InitializeComponent() call is required for Windows Forms designer support.
-			//
 			InitializeComponent();
-			
-			//
-			// TODO: Add constructor code after the InitializeComponent() call.
-			//
+
+            for (int i = 8; i <= 20; i++)
+            {
+                this.textSizeComboBox.Items.Add(i);
+            }
+
+            this.textSizeComboBox.SelectedItem = DrawSettings.LastUsedTextSize;
 		}
 		
 		public Color? SelectedColor { get{return this.selectedColor;} set{this.selectedColor = value;} }
 		public int? PenWidth { get{return this.selectedWidth;} set{this.selectedWidth = value;} }
+        public int SelectedTextSize
+        {
+            get { return this.selectedTextSize; }
+            set { this.selectedTextSize = value; }
+        }
 		
 		
 		void MyColorPickerLoad(object sender, EventArgs e)
@@ -84,16 +93,21 @@ namespace CoolScreenShot.UserControls
 			if (sender != null) {
 				if (this.selectedColor != btn.BackColor) {
 					bigColorButton.BackColor = btn.BackColor;
-					this.selectedColor = btn.BackColor;
-					PropertyChangedEventArgs ee = new PropertyChangedEventArgs(this.selectedColor, this.selectedWidth);
-					if (PropertyChanged != null) {
-						PropertyChanged(btn, ee);
-					}
+
+					DrawSettings.LastUsedColor = btn.BackColor;
+                    FireProertyChangeEvent();
 				}
 			}
 		}
-		
-		
+
+        private void FireProertyChangeEvent()
+        {
+            if (PropertyChanged != null)
+            {
+                PropertyChangedEventArgs ee = new PropertyChangedEventArgs();
+                PropertyChanged(null, ee);
+            }
+        }
 		
 		void MouseHover(object sender, EventArgs e)
 		{
@@ -121,14 +135,13 @@ namespace CoolScreenShot.UserControls
 			if (btn != null) {
 				string index = btn.Name.Replace("btn", "");
 				int w = int.Parse(index);
-				if (w != this.selectedWidth) {
-					this.selectedWidth = w;
-					SwitchButton(this.selectedWidth);
-					
-					if (PropertyChanged != null) {
-						PropertyChangedEventArgs ee = new PropertyChangedEventArgs(bigColorButton.BackColor, this.selectedWidth);
-						PropertyChanged(this, ee);
-					}
+				if (w != DrawSettings.LastUsedPenWidth) {
+                    DrawSettings.LastUsedPenWidth = w;
+                    this.selectedWidth = w;
+
+                    SwitchButton(this.selectedWidth);
+                    
+                    FireProertyChangeEvent();
 				}
 			}
 		}
@@ -142,7 +155,16 @@ namespace CoolScreenShot.UserControls
 		private Image GetImage(string key){
 			return (Image)(resources.GetObject(key));
 		}
-		
+
+        private void textSizeComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            DrawSettings.LastUsedTextSize = (int)textSizeComboBox.SelectedItem;
+            FireProertyChangeEvent();
+        }
+
+        public void SwitchMode(bool isTextMode) {
+            this.textPanel.Visible = isTextMode;
+        }
 	}
 	
 	public class PropertyChangedEventArgs: EventArgs{
@@ -157,10 +179,30 @@ namespace CoolScreenShot.UserControls
 			get{return this.width;} 
 			set{this.width = value;}
 		}
-		
-		public PropertyChangedEventArgs(Color? color, int? width){
+
+        private int textSize;
+        public int TextSize {
+            get { return this.textSize; }
+            set { this.textSize = value; }
+        }
+
+        public PropertyChangedEventArgs() {
+            this.color = DrawSettings.LastUsedColor;
+            this.width = DrawSettings.LastUsedPenWidth;
+            this.textSize = DrawSettings.LastUsedTextSize;
+        }
+
+        public PropertyChangedEventArgs(Color? color, int? width):this(color, width, int.MinValue) { }
+
+        public PropertyChangedEventArgs(Color? color, int? width, int textSize)
+        {
 			this.color = color;
 			this.width = width;
+
+            if (textSize != int.MinValue)
+            {
+                this.textSize = textSize;
+            }
 		}
 	}
 }

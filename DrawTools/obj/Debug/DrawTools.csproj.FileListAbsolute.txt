@@ -34,3 +34,5 @@ D:\QBox\63293309\CoolScreenShot\DrawTools\obj\Debug\GenerateResource-ResGen.read
 D:\QBox\63293309\CoolScreenShot\DrawTools\obj\Debug\GenerateResource-ResGen.write.1.tlog
 D:\QBox\63293309\CoolScreenShot\DrawTools\obj\Debug\DrawTools.dll
 D:\QBox\63293309\CoolScreenShot\DrawTools\obj\Debug\DrawTools.pdb
+D:\QBox\63293309\CoolScreenShot\DrawTools\bin\Debug\DrawTools.dll.config
+E:\apps\github\CoolScreenShot\DrawTools\bin\Debug\DrawTools.dll.config

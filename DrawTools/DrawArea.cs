@@ -196,6 +196,8 @@ namespace DrawTools
             tools[(int)DrawToolType.Arrow] = new ToolArrow();
             tools[(int)DrawToolType.Polygon] = new ToolPolygon();
             tools[(int)DrawToolType.Text] = new ToolText();
+
+            this.toolTextBox.Font = new System.Drawing.Font("Arial Narrow", DrawSettings.LastUsedTextSize);
         }
 
         public void ClearDrawObjects() {
@@ -419,22 +421,23 @@ namespace DrawTools
         	}
         }
         #endregion
-        
+
+        #region TextBox
         void ToolTextBoxMouseEnter(object sender, EventArgs e)
         {
-        	//draw text
+            //draw text
             DrawObject o = graphicsList[0];
-	        DrawText drawText = o as DrawText;
-	        
-	        if(drawText != null)
-	        	drawText.IsJustCreated = false;
+            DrawText drawText = o as DrawText;
+
+            if (drawText != null)
+                drawText.IsJustCreated = false;
         }
-        
+
         void ToolTextBoxTextChanged(object sender, EventArgs e)
         {
-        	//draw text
+            //draw text
             DrawObject o = graphicsList[0];
-	        DrawText drawText = o as DrawText;
+            DrawText drawText = o as DrawText;
 
             if (drawText != null)
             {
@@ -442,5 +445,6 @@ namespace DrawTools
                 drawText.Area = new Rectangle(this.toolTextBox.Location, this.toolTextBox.Size);
             }
         }
+        #endregion
     }
 }

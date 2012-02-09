@@ -34,6 +34,7 @@ namespace DrawTools
             // toolTextBox
             // 
             this.toolTextBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.toolTextBox.Font = new System.Drawing.Font("Arial Narrow", 8F);
             this.toolTextBox.Location = new System.Drawing.Point(3, 44);
             this.toolTextBox.Multiline = true;
             this.toolTextBox.Name = "toolTextBox";

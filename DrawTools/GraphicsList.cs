@@ -459,7 +459,8 @@ namespace DrawTools
                         if (o.Color != properties.Color.Value)
                         {
                             o.Color = properties.Color.Value;
-                            DrawObject.LastUsedColor = properties.Color.Value;
+                            //DrawObject.LastUsedColor = properties.Color.Value;
+                            DrawSettings.LastUsedColor = properties.Color.Value;
                             changed = true;
                         }
                     }
@@ -469,7 +470,7 @@ namespace DrawTools
                         if (o.PenWidth != properties.PenWidth.Value)
                         {
                             o.PenWidth = properties.PenWidth.Value;
-                            DrawObject.LastUsedPenWidth = properties.PenWidth.Value;
+                            DrawSettings.LastUsedPenWidth = properties.PenWidth.Value;
                             changed = true;
                         }
                     }
@@ -508,8 +509,8 @@ namespace DrawTools
         }
         
         public bool ShowColorPickerPanel(DrawArea parent, GraphicsProperties properties){
-        	DrawObject.LastUsedColor = properties.Color.Value;
-        	DrawObject.LastUsedPenWidth = properties.PenWidth.Value;
+            DrawSettings.LastUsedColor = properties.Color.Value;
+            DrawSettings.LastUsedPenWidth = properties.PenWidth.Value;
         	
         	if (SelectionCount < 1)
                 return false;

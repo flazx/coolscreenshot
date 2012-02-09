@@ -95,6 +95,7 @@
     <Compile Include="DrawObject.cs" />
     <Compile Include="DrawPolygon.cs" />
     <Compile Include="DrawRectangle.cs" />
+    <Compile Include="DrawSettings.cs" />
     <Compile Include="DrawText.cs" />
     <Compile Include="ExpandTextBox.cs">
       <SubType>Component</SubType>
@@ -133,6 +134,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <None Include="app.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
